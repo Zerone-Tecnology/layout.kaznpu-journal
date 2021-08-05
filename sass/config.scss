@@ -1,0 +1,39 @@
+//Colors
+$gradient-header-1: radial-gradient(59.01% 3480.58% at 11.61% 50%, #FFFFFF 0%, #F5F9FF 100%);
+$body-color: #E5E5E5;
+$gradient-footer: radial-gradient(744.83% 245.19% at 53.31% 0%, #FFFFFF 54.12%, #F5F9FF 100%);
+$heading-color: #343651;
+$text-color: #000000;
+
+
+//Sizing
+$primary-width: 100%;
+$primary-height: auto;
+$header-height: 190px;
+
+$paddingLR: 10%;
+$paddingUD: 30px;
+
+
+//Initial Style
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+}
+
+h3{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+    color: $heading-color;
+}
