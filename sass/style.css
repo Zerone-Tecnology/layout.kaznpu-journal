@@ -720,6 +720,18 @@ header #header-content .part-2 {
           justify-content: space-between;
 }
 
+@media (max-width: 712px) {
+  #main #main-content #main-row-1 #about .about-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 #main #main-content #main-row-1 #about .about-row #about-image {
   width: 35%;
   height: auto;
@@ -885,10 +897,6 @@ header #header-content .part-2 {
 
 @media (max-width: 712px) {
   #main #main-content #main-row-1 #about #layer-block {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

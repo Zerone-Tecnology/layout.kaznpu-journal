@@ -334,6 +334,10 @@ header{
                 .about-row{
                     @include basic-parameters();
                     @include flex-parameters(row, flex-start, space-between);
+                    @include resolution-3(){
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
                     #about-image{
                         width: 35%;
                         height: auto;
@@ -419,9 +423,8 @@ header{
                         font-weight: 700;
                     }
                 }
-                #layer-block{                    
+                #layer-block{
                     @include resolution-3(){
-                        flex-direction: column;
                         align-items: center;
                     }
                 }
