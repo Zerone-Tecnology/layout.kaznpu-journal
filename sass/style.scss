@@ -41,30 +41,23 @@ header{
     padding: $paddingUD $paddingLR;
     background: $gradient-header-1;
     overflow-y: hidden;
-    box-shadow: 0px 35px 30px -25px #E6EAF0;
-
     @include resolution-1(){
         padding: $paddingUD 5%;
-    }
-    
+    }   
     #header-content{
         @include basic-parameters();
         @include flex-parameters(row, center, space-between);
         overflow-y: hidden;
         flex-wrap: wrap;
-
         .header-item{
             height: $header-height;
-
             @include resolution-2(){
                 height: auto;
             }
         }
-
         #header-left{
             @include flex-parameters(column, center, center);
             width: 15%;
-
             @include resolution-2(){
                @include flex-parameters(row, center, flex-start);
                  width: 15%;
@@ -76,16 +69,13 @@ header{
                  width: 30%;
              }
         }
-
         #header-burger{
             @include flex-parameters(row, center, flex-end);
             display: none;
             width: 30%;
-
             @include resolution-2(){
                 display: flex;
             }
-
         }
         #header-close{
             @include flex-parameters(row, center, flex-end);
@@ -95,16 +85,13 @@ header{
                 z-index: 99999999;
             }
         }
-
         #header-center{
             @include flex-parameters(column, flex-start, flex-end);
             width: 60%;
-
             @include resolution-2(){
                 @include flex-parameters(row, center, space-between);
                 width: 100%;
             }
-
             #header-text{
                 @include resolution-2(){
                     width: 100%;
@@ -128,18 +115,15 @@ header{
                     }
                 }
             }
-
             ul{
                 @include basic-parameters();
                 @include flex-parameters(row, center, space-between);
                 list-style: none;
                 margin-top: 40px;
-
                 a{
                     text-decoration: none;
                     color: $heading-color;
                 }
-
                 .link{
                     @include flex-parameters(column, center, center);
                     &::after {
@@ -160,7 +144,6 @@ header{
                         }
                     }
                 }
-
                 @include resolution-2(){
                     @include flex-parameters(column, center, center);
                     width: 100%;
@@ -169,7 +152,6 @@ header{
                     position: absolute;
                     margin-top: -200%;
                 }
-
                 &.mobile {
                     position: fixed; 
                     height: 100vh;
@@ -194,24 +176,19 @@ header{
                 }
             }          
         }
-
         #header-right{
             @include flex-parameters(column, flex-end, space-between);
             width: 20%;
             padding: 10px 0px;
-
             @include resolution-2(){
                 @include flex-parameters(row, center, space-between);
                 width: 100%;
                 padding-bottom: 0;
             }
-
             .header-right-item{
                 @include flex-parameters(row, center, center);
-
                 div{
                     @include flex-parameters(column, center, center);
-
                     &::before {
                         position: absolute;
                         display: inline-block;
@@ -221,12 +198,10 @@ header{
                         width: 10px;
                         margin-top: -80px;
                         background-color: transparent;
-
                         @include resolution-2(){
                             margin-top: -50px;
                         }
                     }
-
                     &:hover{
                         &::before {
                             background-color: $heading-color;
@@ -237,7 +212,6 @@ header{
                         background-color: $heading-color;   
                         color: #FFFFFF
                     }
-
                 }
             }
         }
@@ -247,7 +221,6 @@ header{
             @include font-parameters(400, 18px, 30px, $heading-color);
             @include flex-parameters(column, center, center);
             cursor: pointer;
-
             @include resolution-2(){
                 padding: 15px;
             }
@@ -261,7 +234,6 @@ header{
             border: 0;
             margin: 0px 5px;
             font-size: 18px;
-
             @include resolution-2(){
                 font-size: 14px;
                 padding: 9px 12px;
@@ -269,10 +241,13 @@ header{
                 margin: 7px 3px 0px 3px;
                 line-height: unset;
             }
-
             @include resolution-3(){
                 font-size: 12px;
                 padding: 6px 9px;
+            }
+            &:hover{
+                transition: 0.3s;
+                box-shadow: 1px 18px 8px -11px #D6DCE3;
             }
         }
         .part-2{
@@ -282,7 +257,6 @@ header{
             padding: auto;
             font-size: 12px;
             border-radius: 50%;
-
             @include resolution-2(){
                 width: 40px;
                 height: 40px;
@@ -290,7 +264,6 @@ header{
                 margin: 7px 3px 0px 3px;
                 line-height: unset;
             }
-
             @include resolution-3(){
                 width: 30px;
                 height: 30px;
@@ -308,15 +281,12 @@ header{
     padding: 80px $paddingLR;
     background-color: #F4F6F8;
     position: relative;
-
     @include resolution-1(){
         padding: $paddingUD 5%;
     }
-
     #main-content{
         @include basic-parameters();
         @include flex-parameters(column, flex-start, center);
-
         #form-mobile{
             display: none;
             width: 100%;
@@ -343,15 +313,12 @@ header{
                 display: flex;
             }
         }
-
         #main-row-1{
             @include basic-parameters();
             @include flex-parameters(row, flex-start, space-between);
-
             @include resolution-1(){
                 flex-direction: column;
             }
-
             #about{
                 @include basic-parameters();
                 @include flex-parameters(column, flex-start, center);
@@ -359,23 +326,19 @@ header{
                 background-color: #FFFFFF;
                 padding: 60px;
                 border-radius: 4px;
-
                 @include resolution-1(){
                     width: 100%;
                     margin-bottom: 80px;
                     padding: 60px 30px;
                 }
-
                 .about-row{
                     @include basic-parameters();
                     @include flex-parameters(row, flex-start, space-between);
-
                     #about-image{
                         width: 35%;
                         height: auto;
                         box-shadow: 0px 0px 56px 1px rgba(214, 220, 227, 0.75);
                         border-radius: 4px;
-
                         @include resolution-2(){
                             width: 40%;
                         }
@@ -386,7 +349,6 @@ header{
                     #about-text{
                         width: 60%;
                         height: auto;
-
                         @include resolution-2(){
                             width: 55%;
                         }
@@ -394,32 +356,24 @@ header{
                             width: 100%;
                             margin: 50px 0px;
                         }
-
-
                     }
-
                     .authorship-column{
                         @include flex-parameters(column, flex-start, flex-start);
-
                         div{
                             @include basic-parameters();
                             @include flex-parameters(column, flex-start, flex-start);
                             margin-top: 50px;
-
                             @include resolution-2{
                                 margin-top: 20px;
                             }
-
                         }
                     }
                     #column-1{
                         width: 35%;
                         height: auto;
-
                         @include resolution-2{
                             width: 40%;
                         }
-
                         @include resolution-3{
                             width: 50%;
                         }
@@ -427,14 +381,12 @@ header{
                     #column-2{
                         width: 60%;
                         height: auto;
-
                         @include resolution-2{
                             width: 55%;
                         }
                         @include resolution-3{
                             width: 50%;
                         }
-
                     }
                     h2{
                         @include font-parameters(700, 26px, none, $heading-color);
@@ -445,16 +397,13 @@ header{
                     p{
                         @include font-parameters(400, 14px, 24px, #000000);
                         margin-top: 50px;
-
                         @include resolution-2(){
                             margin-top: 25px;
                             line-height: 21px;
                         }
-
                         @include resolution-3(){
                             line-height: unset;
                         }
-
                         br{
                             @include resolution-2(){
                                 display: none;
@@ -477,15 +426,12 @@ header{
                     }
                 }
             }
-
             #info-search{
                 @include flex-parameters(column, flex-start, flex-start);
                 width: 30%;
-
                 @include resolution-1(){
                     width: 100%;
                 }
-
                 #search{
                     width: 100%;
                     height: 50px;
@@ -493,31 +439,30 @@ header{
                     border-radius: 30px;
                     position: relative;
                     margin-bottom: 80px;
-
                     @include resolution-1(){
                         display: none;
                     }
-    
                     input{
                         @extend #search;
                         padding: 15px 30px;
                         border: none;
                         box-shadow: 1px 18px 8px -11px #E9EEF3;
                     }
-    
                     svg{
                         position: absolute;
                         bottom: 15px;
                         right: 15px;
                     }
                 }
-    
                 #information{
                     @include basic-parameters();
                     @include flex-parameters(row, center, space-between);
                     flex-wrap: wrap;
                     margin: 60px 0 0 -15px;
-                    
+                    @include resolution-3(){
+                        flex-direction: column;
+                        margin-left: 0;
+                    }
                     .info-block{
                         @include flex-parameters(row, center, space-between);
                         width: 50%;
@@ -526,21 +471,24 @@ header{
                         position: relative;
                         cursor: pointer;
                         text-decoration: none;
-    
+                        @include resolution-3(){
+                            width: 100%;
+                            padding: 15px 0;
+                        }
                         .info-name{
                             @include basic-parameters();
                             padding: 25px;
                             background-color: #FFFFFF;
                             @include font-parameters(400, 18px, 25px, $heading-color);
                             border-radius: 4px;
-
                             @include resolution-2(){
                                 font-size: 16px;
                             }
-                            @include resolution-3(){
-                                font-size: 12px;
+                            br{
+                                @include resolution-3(){
+                                    display: none;
+                                }
                             }
-
                             &::before {
                                 position: absolute;
                                 display: inline-block;
@@ -560,7 +508,6 @@ header{
                             }
                             
                         }
-    
                         &:hover{
                             .info-name{
                                 box-shadow: 1px 18px 8px -11px #D6DCE3;
@@ -570,21 +517,16 @@ header{
                     }
                 }
             }           
-
         }
-
         #main-row-2{
             @include flex-parameters(row, flex-start, flex-start);
             width: 65%;
             padding-top: 80px;
-
             @include resolution-1(){
                 width: 100%;
             }
-
             #indexing{
                 @include basic-parameters();
-
                 .swiper-container{
                     @include basic-parameters();
                     @include flex-parameters(row, center, center);
@@ -592,27 +534,22 @@ header{
                     padding: 30px 15px;
                     margin-top: 50px;
                     border-radius: 4px;
-
                     .swiper-wrapper{
                         @include flex-parameters(row, center, space-between);
-
                         a{
                             @include flex-parameters(row, center, center);
                             cursor: pointer;
-
                             img{
                                 width: 120px;
                                 height: auto;
                                 margin: 15px;
                                 filter: grayscale(90%);
                             }
-
                             img:hover{
                                 filter: unset;
                             }
                         }
                     }
-        
                     .swiper-pagination-bullet{
                         background-color:$heading-color;
                     }
@@ -629,30 +566,24 @@ footer{
     @include flex-parameters(row, center, center);
     padding: $paddingUD $paddingLR;
     background: $gradient-footer;
-
     @include resolution-1(){
         padding: $paddingUD 5%;
     }
-
     #footer-content{
         @include basic-parameters();
         @include flex-parameters(row, flex-start, space-between);
         flex-wrap: wrap;
-
         @include resolution-2(){
             flex-direction: column-reverse;
             align-items: flex-end;
         }
-
         #footer-1{
             width: 19%;
             @include flex-parameters(row, flex-start, flex-start);
-
             @include resolution-2{
                 display: none;
             }
         }
-
         #footer-2{
             width: 68%;
             @include flex-parameters(column, flex-start, space-between);
@@ -709,7 +640,6 @@ footer{
                 }
             }
         }
-
         #footer-3{
             width: 9%;
             @include flex-parameters(row, flex-start, flex-end);
@@ -719,7 +649,6 @@ footer{
                 height: 50px;
                 border-radius: 50%;
                 cursor: pointer;
-
                 @include resolution-2(){
                     width: 30px;
                     height: 30px;
@@ -729,12 +658,10 @@ footer{
                     width: 20px;
                     height: 20px;
                 }
-
                 &:hover{
                     box-shadow: 1px 18px 8px -11px #E9EEF3;
                 }
             }
-
             @include resolution-2(){
                 width: auto;
             }
