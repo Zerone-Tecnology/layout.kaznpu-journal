@@ -83,11 +83,6 @@ header{
             display: none;
             width: 30%;
             &.mobile {
-                width: 50px;
-                height: 50px;
-                top: 30px;
-                right: 5%;
-                position: fixed;
                 z-index: 99999999;
             }
         }
@@ -238,8 +233,14 @@ header{
                                     }
                                 }
                             }
-                          }
-                      };
+                        }
+                    }
+                    #this-page{
+                        &::after{
+                            background-color: $heading-color;
+                            margin-bottom: -45px;
+                        }
+                    }
                 }
                 @include resolution-2(){
                     @include flex-parameters(column, center, center);
@@ -384,6 +385,37 @@ header{
     #main-content{
         @include basic-parameters();
         @include flex-parameters(column, flex-start, center);
+
+        #page-identifier{
+            @include flex-parameters(row, flex-start, flex-start);
+            margin-top: -40px;
+            @include resolution-1(){
+                margin-top: -20px;
+            }
+            margin-bottom: 40px;
+            .page{
+                @include font-parameters(400, unset, 16px, $heading-color);
+                opacity: 0.25;
+            }
+            #current-page{
+                position: relative;
+                opacity: 0.5;
+                display: flex;
+                flex-direction: row;
+                margin-left: 15px;
+                &::before{
+                    position: absolute;
+                    display: inline-block;
+                    content: '';
+                    border-radius: 50%;
+                    height: 5px;
+                    width: 5px;
+                    top: 5px;
+                    left: -10px;
+                    background-color: $heading-color;
+                }
+            }
+        }
         #form-mobile{
             display: none;
             width: 100%;
@@ -410,115 +442,78 @@ header{
                 display: flex;
             }
         }
-        #main-row-1{
+        .main-row{
             @include basic-parameters();
             @include flex-parameters(row, flex-start, space-between);
             @include resolution-1(){
                 flex-direction: column;
             }
-            #about{
-                @include basic-parameters();
-                @include flex-parameters(column, flex-start, center);
-                width: 65%;
-                background-color: #FFFFFF;
-                padding: 60px;
-                border-radius: 4px;
+            #list{
+                @include flex-parameters(column, flex-start, flex-start);
+                width: 55%;
                 @include resolution-1(){
                     width: 100%;
-                    margin-bottom: 80px;
-                    padding: 60px 30px;
+                    padding-bottom: 50px;
                 }
-                .about-row{
-                    @include basic-parameters();
-                    @include flex-parameters(row, flex-start, space-between);
-                    @include resolution-3(){
-                        flex-direction: column;
-                        align-items: flex-start;
+
+                ul{
+                    width: 100%;
+                }
+
+                #archives-list{
+                    padding-top: 40px;
+                    b{
+                        @include font-parameters(700, unset, 18px, $heading-color);
                     }
-                    #about-image{
-                        width: 35%;
-                        height: auto;
-                        box-shadow: 0px 0px 56px 1px rgba(214, 220, 227, 0.75);
-                        border-radius: 4px;
-                        @include resolution-2(){
-                            width: 40%;
-                        }
-                        @include resolution-3(){
-                            width: auto;
-                        }
-                    }
-                    #about-text{
-                        width: 60%;
-                        height: auto;
-                        @include resolution-2(){
-                            width: 55%;
-                        }
-                        @include resolution-3(){
-                            width: 100%;
-                            margin: 50px 0px;
-                        }
-                    }
-                    .authorship-column{
-                        @include flex-parameters(column, flex-start, flex-start);
-                        div{
-                            @include basic-parameters();
-                            @include flex-parameters(column, flex-start, flex-start);
-                            margin-top: 50px;
-                            @include resolution-2{
+                    li{
+                        padding: 20px 0;
+                        .inner-list{
+                            @include flex-parameters(row, flex-start, space-between);
+                            flex-wrap: wrap;
+                            li{
+                                width: 23%;
                                 margin-top: 20px;
+                                line-height: 24px;
+                                background-color: hsl(0, 0%, 100%);
+                                cursor: pointer;
+                                text-align: center;
+                                border-radius: 4px;
+                                box-shadow: 1px 18px 8px -11px #E9EEF3;
+                                @include resolution-3(){
+                                    width: 48%; 
+                                }
+                                &:hover{
+                                    box-shadow: 1px 18px 8px -11px #D6DCE3;
+                                }
+                            }
+                            a{
+                                @include flex-parameters(row, center, center);
+                                position: relative;
+                                width: 100%;
+                                @include font-parameters(400, unset, 16px, $heading-color);
+                                
+                                &::before {
+                                    display: inline-block;
+                                    position: absolute;
+                                    content: '';
+                                    border-radius: 50%;
+                                    height: 10px;
+                                    width: 10px;
+                                    left: 10px;
+                                    top: 0px;
+                                    background-color: transparent;
+                                }
+                                &:hover{
+                                    &::before {
+                                        background-color: #71B9F9;
+                                        transition: 0.3s;
+                                    }
+                                }
                             }
                         }
                     }
-                    #column-1{
-                        width: 35%;
-                        height: auto;
-                        @include resolution-2{
-                            width: 40%;
-                        }
-                        @include resolution-3{
-                            width: 50%;
-                        }
-                    }
-                    #column-2{
-                        width: 60%;
-                        height: auto;
-                        @include resolution-2{
-                            width: 55%;
-                        }
-                        @include resolution-3{
-                            width: 50%;
-                        }
-                    }
-                    p{
-                        @include font-parameters(400, 14px, 24px, #000000);
-                        margin-top: 50px;
-                        @include resolution-2(){
-                            margin-top: 25px;
-                            line-height: 21px;
-                        }
-                        @include resolution-3(){
-                            line-height: unset;
-                        }
-                        br{
-                            @include resolution-2(){
-                                display: none;
-                            }
-                        }
-                    }
-                    a{
-                        @extend p;
-                        margin: 0;
-                    }
-                    .bold{
-                        @extend a;
-                        font-weight: 700;
-                    }
                 }
-                #layer-block{
-                    @include resolution-3(){
-                        align-items: center;
-                    }
-                }
+
             }
             #info-search{
                 @include flex-parameters(column, flex-start, flex-start);
@@ -613,44 +608,7 @@ header{
                 }
             }           
         }
-        #main-row-2{
-            @include flex-parameters(row, flex-start, flex-start);
-            width: 65%;
-            padding-top: 80px;
-            @include resolution-1(){
-                width: 100%;
-            }
-            #indexing{
-                @include basic-parameters();
-                .swiper-container{
-                    @include basic-parameters();
-                    @include flex-parameters(row, center, center);
-                    background-color: #FFFFFF;
-                    padding: 30px 15px;
-                    margin-top: 50px;
-                    border-radius: 4px;
-                    .swiper-wrapper{
-                        @include flex-parameters(row, center, space-between);
-                        a{
-                            @include flex-parameters(row, center, center);
-                            cursor: pointer;
-                            img{
-                                width: 120px;
-                                height: auto;
-                                margin: 15px;
-                                filter: grayscale(90%);
-                            }
-                            img:hover{
-                                filter: unset;
-                            }
-                        }
-                    }
-                    .swiper-pagination-bullet{
-                        background-color:$heading-color;
-                    }
-                }
-            }
-        }
+        
     }
 }
 
