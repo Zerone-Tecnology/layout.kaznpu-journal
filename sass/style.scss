@@ -546,71 +546,64 @@ header{
                         border: none;
                         box-shadow: 1px 18px 8px -11px #E9EEF3;
                     }
-                    svg{
+                    button{
+                        height: auto;
+                        cursor: pointer;
                         position: absolute;
                         bottom: 15px;
                         right: 15px;
+                        background-color: transparent;
+                        border: none;
+                        svg{
+                            width: 100%;
+                        }
                     }
+                }
+                P{
+                    @include font-parameters(700, 24px, 24px, $heading-color);
                 }
                 #information{
                     @include basic-parameters();
                     @include flex-parameters(row, center, space-between);
                     flex-wrap: wrap;
-                    margin: 60px 0 0 -15px;
                     @include resolution-3(){
                         flex-direction: column;
                         margin-left: 0;
                     }
-                    .info-block{
-                        @include flex-parameters(row, center, space-between);
-                        width: 50%;
-                        height: auto;
-                        padding: 15px;
-                        position: relative;
-                        cursor: pointer;
-                        text-decoration: none;
-                        @include resolution-3(){
+                    li{
+                        width: 45%;
+                        margin-top: 30px;
+                        background-color: hsl(0, 0%, 100%);
+                        @include resolution-2(){
                             width: 100%;
-                            padding: 15px 0;
-                        }
-                        .info-name{
-                            @include basic-parameters();
-                            padding: 25px;
-                            background-color: #FFFFFF;
-                            box-shadow: 1px 18px 8px -11px #E9EEF3;
-                            @include font-parameters(400, 18px, 25px, $heading-color);
-                            border-radius: 4px;
-                            @include resolution-2(){
-                                font-size: 16px;
-                            }
                             br{
-                                @include resolution-3(){
-                                    display: none;
-                                }
+                                display: none;
                             }
-                            &::before {
-                                position: absolute;
+                        }
+                        a{
+                            @include flex-parameters(row, center, center);
+                            position: relative;
+                            width: 100%;
+                            padding: 30px 0;
+                            box-shadow: 1px 18px 8px -11px #E9EEF3;
+                            border-radius: 4px;
+                            @include font-parameters(400, unset, 16px, $heading-color);
+                            &::before{
                                 display: inline-block;
+                                position: absolute;
                                 content: '';
                                 border-radius: 50%;
                                 height: 10px;
                                 width: 10px;
-                                left: 25px;
-                                top: 25px;
+                                left: 10px;
+                                top: 10px;
                                 background-color: transparent;
                             }
                             &:hover{
-                                &::before {
-                                    background-color: #71B9F9;
-                                    transition: 0.3s;
-                                }
-                            }
-                            
-                        }
-                        &:hover{
-                            .info-name{
                                 box-shadow: 1px 18px 8px -11px #D6DCE3;
-                                transition: 0.3s;
+                                &::before{
+                                    background-color: #71B9F9;
+                                }
                             }
                         }
                     }
