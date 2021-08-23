@@ -773,31 +773,6 @@ header #header-content .part-2 {
           justify-content: center;
 }
 
-#main #main-content #page-identifier #current-page {
-  position: relative;
-  opacity: 0.5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-left: 15px;
-}
-
-#main #main-content #page-identifier #current-page::before {
-  position: absolute;
-  display: inline-block;
-  content: '';
-  border-radius: 50%;
-  height: 5px;
-  width: 5px;
-  top: 5px;
-  left: -10px;
-  background-color: #343651;
-}
-
 #main #main-content ul.breadcrumb {
   display: -webkit-box;
   display: -ms-flexbox;

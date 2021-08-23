@@ -388,27 +388,6 @@ header{
     #main-content{
         @include basic-parameters();
         @include flex-parameters(column, flex-start, center);
-        #page-identifier{
-            
-            #current-page{
-                position: relative;
-                opacity: 0.5;
-                display: flex;
-                flex-direction: row;
-                margin-left: 15px;
-                &::before{
-                    position: absolute;
-                    display: inline-block;
-                    content: '';
-                    border-radius: 50%;
-                    height: 5px;
-                    width: 5px;
-                    top: 5px;
-                    left: -10px;
-                    background-color: $heading-color;
-                }
-            }
-        }
         ul.breadcrumb {
             @include flex-parameters(row, center, flex-start);
             list-style: none;
