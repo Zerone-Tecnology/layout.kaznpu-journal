@@ -196,11 +196,6 @@ header #header-content #header-close {
 }
 
 header #header-content #header-close.mobile {
-  width: 50px;
-  height: 50px;
-  top: 30px;
-  right: 5%;
-  position: fixed;
   z-index: 99999999;
 }
 
@@ -246,7 +241,7 @@ header #header-content #header-center {
   }
 }
 
-header #header-content #header-center #header-text h4 {
+header #header-content #header-center #header-text span {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -255,7 +250,7 @@ header #header-content #header-center #header-text h4 {
 }
 
 @media (max-width: 712px) {
-  header #header-content #header-center #header-text h4 {
+  header #header-content #header-center #header-text span {
     font-size: 10px;
   }
 }
@@ -286,7 +281,7 @@ header #header-content #header-center #header-text h1 {
   }
 }
 
-header #header-content #header-center ul {
+header #header-content #header-center #header-menu {
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -305,26 +300,26 @@ header #header-content #header-center ul {
   margin-top: 40px;
 }
 
-header #header-content #header-center ul .menu-item, header #header-content #header-center ul .part-1, header #header-content #header-center ul .part-2 {
+header #header-content #header-center #header-menu li {
   position: relative;
 }
 
 @media (max-width: 1024px) {
-  header #header-content #header-center ul .menu-item:active .dropdown-content, header #header-content #header-center ul .part-1:active .dropdown-content, header #header-content #header-center ul .part-2:active .dropdown-content {
+  header #header-content #header-center #header-menu li:active .dropdown-content {
     display: block;
   }
 }
 
-header #header-content #header-center ul .menu-item a, header #header-content #header-center ul .part-1 a, header #header-content #header-center ul .part-2 a, header #header-content #header-center ul .menu-item #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .menu-item .bold, header #header-content #header-center ul .part-1 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .part-1 .bold, header #header-content #header-center ul .part-2 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .part-2 .bold {
+header #header-content #header-center #header-menu li a, header #header-content #header-center #header-menu li #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row header #header-content #header-center #header-menu li .bold {
   text-decoration: none;
   color: #343651;
 }
 
-header #header-content #header-center ul .menu-item:hover .dropdown-content, header #header-content #header-center ul .part-1:hover .dropdown-content, header #header-content #header-center ul .part-2:hover .dropdown-content {
+header #header-content #header-center #header-menu li:hover .dropdown-content {
   display: block;
 }
 
-header #header-content #header-center ul .menu-item .link, header #header-content #header-center ul .part-1 .link, header #header-content #header-center ul .part-2 .link {
+header #header-content #header-center #header-menu li .navbar-menu-link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,14 +338,14 @@ header #header-content #header-center ul .menu-item .link, header #header-conten
 }
 
 @media (max-width: 1024px) {
-  header #header-content #header-center ul .menu-item .link, header #header-content #header-center ul .part-1 .link, header #header-content #header-center ul .part-2 .link {
+  header #header-content #header-center #header-menu li .navbar-menu-link {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     position: relative;
   }
-  header #header-content #header-center ul .menu-item .link::before, header #header-content #header-center ul .part-1 .link::before, header #header-content #header-center ul .part-2 .link::before {
+  header #header-content #header-center #header-menu li .navbar-menu-link::before {
     position: absolute;
     display: inline-block;
     content: '';
@@ -363,7 +358,7 @@ header #header-content #header-center ul .menu-item .link, header #header-conten
   }
 }
 
-header #header-content #header-center ul .menu-item .link::after, header #header-content #header-center ul .part-1 .link::after, header #header-content #header-center ul .part-2 .link::after {
+header #header-content #header-center #header-menu li .navbar-menu-link::after {
   position: absolute;
   display: inline-block;
   content: '';
@@ -376,13 +371,13 @@ header #header-content #header-center ul .menu-item .link::after, header #header
 }
 
 @media (max-width: 1024px) {
-  header #header-content #header-center ul .menu-item .link::after, header #header-content #header-center ul .part-1 .link::after, header #header-content #header-center ul .part-2 .link::after {
+  header #header-content #header-center #header-menu li .navbar-menu-link::after {
     margin-bottom: 0;
     margin-right: -160px;
   }
 }
 
-header #header-content #header-center ul .menu-item .link:hover::after, header #header-content #header-center ul .part-1 .link:hover::after, header #header-content #header-center ul .part-2 .link:hover::after {
+header #header-content #header-center #header-menu li .navbar-menu-link:hover::after {
   background-color: #343651;
   opacity: 0.2;
   -webkit-transition: 0.3s;
@@ -390,7 +385,7 @@ header #header-content #header-center ul .menu-item .link:hover::after, header #
 }
 
 @media (max-width: 1024px) {
-  header #header-content #header-center ul .menu-item .link:hover::before, header #header-content #header-center ul .part-1 .link:hover::before, header #header-content #header-center ul .part-2 .link:hover::before {
+  header #header-content #header-center #header-menu li .navbar-menu-link:hover::before {
     background-color: #343651;
     opacity: 0.2;
     -webkit-transition: 0.3s;
@@ -398,7 +393,7 @@ header #header-content #header-center ul .menu-item .link:hover::after, header #
   }
 }
 
-header #header-content #header-center ul .menu-item .dropdown-content, header #header-content #header-center ul .part-1 .dropdown-content, header #header-content #header-center ul .part-2 .dropdown-content {
+header #header-content #header-center #header-menu li .dropdown-content {
   display: none;
   position: absolute;
   min-width: 320px;
@@ -413,14 +408,14 @@ header #header-content #header-center ul .menu-item .dropdown-content, header #h
 }
 
 @media (max-width: 1024px) {
-  header #header-content #header-center ul .menu-item .dropdown-content, header #header-content #header-center ul .part-1 .dropdown-content, header #header-content #header-center ul .part-2 .dropdown-content {
+  header #header-content #header-center #header-menu li .dropdown-content {
     position: inherit;
     top: auto;
     left: auto;
   }
 }
 
-header #header-content #header-center ul .menu-item .dropdown-content a, header #header-content #header-center ul .part-1 .dropdown-content a, header #header-content #header-center ul .part-2 .dropdown-content a, header #header-content #header-center ul .menu-item .dropdown-content #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .menu-item .dropdown-content .bold, header #header-content #header-center ul .part-1 .dropdown-content #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .part-1 .dropdown-content .bold, header #header-content #header-center ul .part-2 .dropdown-content #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .part-2 .dropdown-content .bold {
+header #header-content #header-center #header-menu li .dropdown-content li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -439,17 +434,17 @@ header #header-content #header-center ul .menu-item .dropdown-content a, header 
 }
 
 @media (max-width: 1024px) {
-  header #header-content #header-center ul .menu-item .dropdown-content a, header #header-content #header-center ul .part-1 .dropdown-content a, header #header-content #header-center ul .part-2 .dropdown-content a, header #header-content #header-center ul .menu-item .dropdown-content #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .menu-item .dropdown-content .bold, header #header-content #header-center ul .part-1 .dropdown-content #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .part-1 .dropdown-content .bold, header #header-content #header-center ul .part-2 .dropdown-content #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .part-2 .dropdown-content .bold {
+  header #header-content #header-center #header-menu li .dropdown-content li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
-  header #header-content #header-center ul .menu-item .dropdown-content a:hover, header #header-content #header-center ul .part-1 .dropdown-content a:hover, header #header-content #header-center ul .part-2 .dropdown-content a:hover, header #header-content #header-center ul .menu-item .dropdown-content #main #main-content #main-row-1 #about .about-row .bold:hover, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .menu-item .dropdown-content .bold:hover, header #header-content #header-center ul .part-1 .dropdown-content #main #main-content #main-row-1 #about .about-row .bold:hover, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .part-1 .dropdown-content .bold:hover, header #header-content #header-center ul .part-2 .dropdown-content #main #main-content #main-row-1 #about .about-row .bold:hover, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .part-2 .dropdown-content .bold:hover {
+  header #header-content #header-center #header-menu li .dropdown-content li:hover {
     background-color: #f4f6f87c;
   }
 }
 
-header #header-content #header-center ul .menu-item .dropdown-content a::before, header #header-content #header-center ul .part-1 .dropdown-content a::before, header #header-content #header-center ul .part-2 .dropdown-content a::before, header #header-content #header-center ul .menu-item .dropdown-content #main #main-content #main-row-1 #about .about-row .bold::before, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .menu-item .dropdown-content .bold::before, header #header-content #header-center ul .part-1 .dropdown-content #main #main-content #main-row-1 #about .about-row .bold::before, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .part-1 .dropdown-content .bold::before, header #header-content #header-center ul .part-2 .dropdown-content #main #main-content #main-row-1 #about .about-row .bold::before, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .part-2 .dropdown-content .bold::before {
+header #header-content #header-center #header-menu li .dropdown-content li::before {
   position: absolute;
   display: inline-block;
   content: '';
@@ -460,18 +455,29 @@ header #header-content #header-center ul .menu-item .dropdown-content a::before,
   margin-left: -18px;
 }
 
-header #header-content #header-center ul .menu-item .dropdown-content a:hover::before, header #header-content #header-center ul .part-1 .dropdown-content a:hover::before, header #header-content #header-center ul .part-2 .dropdown-content a:hover::before, header #header-content #header-center ul .menu-item .dropdown-content #main #main-content #main-row-1 #about .about-row .bold:hover::before, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .menu-item .dropdown-content .bold:hover::before, header #header-content #header-center ul .part-1 .dropdown-content #main #main-content #main-row-1 #about .about-row .bold:hover::before, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .part-1 .dropdown-content .bold:hover::before, header #header-content #header-center ul .part-2 .dropdown-content #main #main-content #main-row-1 #about .about-row .bold:hover::before, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .part-2 .dropdown-content .bold:hover::before {
+header #header-content #header-center #header-menu li .dropdown-content li:hover::before {
   background-color: #71B9F9;
 }
 
 @media (max-width: 1024px) {
-  header #header-content #header-center ul .menu-item .dropdown-content a:hover::before, header #header-content #header-center ul .part-1 .dropdown-content a:hover::before, header #header-content #header-center ul .part-2 .dropdown-content a:hover::before, header #header-content #header-center ul .menu-item .dropdown-content #main #main-content #main-row-1 #about .about-row .bold:hover::before, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .menu-item .dropdown-content .bold:hover::before, header #header-content #header-center ul .part-1 .dropdown-content #main #main-content #main-row-1 #about .about-row .bold:hover::before, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .part-1 .dropdown-content .bold:hover::before, header #header-content #header-center ul .part-2 .dropdown-content #main #main-content #main-row-1 #about .about-row .bold:hover::before, #main #main-content #main-row-1 #about .about-row header #header-content #header-center ul .part-2 .dropdown-content .bold:hover::before {
+  header #header-content #header-center #header-menu li .dropdown-content li:hover::before {
     background-color: transparent;
   }
 }
 
+header #header-content #header-center #header-menu li #this-page::after {
+  background-color: #343651;
+  margin-bottom: -45px;
+}
+
 @media (max-width: 1024px) {
-  header #header-content #header-center ul {
+  header #header-content #header-center #header-menu li #this-page::after {
+    margin-bottom: unset;
+  }
+}
+
+@media (max-width: 1024px) {
+  header #header-content #header-center #header-menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -493,7 +499,7 @@ header #header-content #header-center ul .menu-item .dropdown-content a:hover::b
   }
 }
 
-header #header-content #header-center ul.mobile {
+header #header-content #header-center #header-menu.mobile {
   position: fixed;
   height: 100vh;
   z-index: 9999;
@@ -633,7 +639,7 @@ header #header-content #header-right .header-right-item li .current {
   color: #FFFFFF;
 }
 
-header #header-content .menu-item, header #header-content .part-1, header #header-content .part-2 {
+header #header-content .navbar-menu-item, header #header-content .part-1, header #header-content .part-2 {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -656,7 +662,7 @@ header #header-content .menu-item, header #header-content .part-1, header #heade
 }
 
 @media (max-width: 1024px) {
-  header #header-content .menu-item, header #header-content .part-1, header #header-content .part-2 {
+  header #header-content .navbar-menu-item, header #header-content .part-1, header #header-content .part-2 {
     padding: 15px;
   }
 }
@@ -1520,14 +1526,14 @@ footer #footer-content #footer-2 #footer-2-2 #developers-name {
   }
 }
 
-footer #footer-content #footer-2 a, footer #footer-content #footer-2 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-2 .bold {
+footer #footer-content #footer-2 p, footer #footer-content #footer-2 #main #main-content #main-row-1 #about .about-row a, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-2 a, footer #footer-content #footer-2 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-2 .bold, footer #footer-content #footer-2 span, footer #footer-content #footer-2 a, footer #footer-content #footer-2 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-2 .bold {
   text-decoration: none;
   color: #343651;
   opacity: 0.6;
 }
 
 @media (max-width: 712px) {
-  footer #footer-content #footer-2 a, footer #footer-content #footer-2 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-2 .bold {
+  footer #footer-content #footer-2 p, footer #footer-content #footer-2 #main #main-content #main-row-1 #about .about-row a, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-2 a, footer #footer-content #footer-2 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-2 .bold, footer #footer-content #footer-2 span, footer #footer-content #footer-2 a, footer #footer-content #footer-2 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-2 .bold {
     line-height: 18px;
   }
 }

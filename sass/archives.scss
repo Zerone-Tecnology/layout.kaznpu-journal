@@ -97,7 +97,7 @@ header{
                 @include resolution-2(){
                     width: 100%;
                 }
-                h4{
+                span{
                     @include font-parameters(300, 16px, none, $heading-color);
                     @include resolution-3(){
                         font-size: 10px;
@@ -116,11 +116,11 @@ header{
                     }
                 }
             }
-            ul{
+            #header-menu{
                 @include basic-parameters();
                 @include flex-parameters(row, center, space-between);
                 margin-top: 40px;
-                .menu-item{
+                li{
                     @include resolution-2(){
                         &:active{
                             .dropdown-content{
@@ -138,7 +138,7 @@ header{
                             display: block;
                         }
                     }
-                    .link{
+                    .navbar-menu-link{
                         @include flex-parameters(column, center, center);
                         border: none;
                         cursor: pointer;
@@ -205,7 +205,7 @@ header{
                             top: auto;
                             left: auto;
                         }
-                        a {
+                        li {
                             @include flex-parameters(row, center, flex-start);
                             background-color: #FFFFFF;
                             padding: 12px 28px;
@@ -239,6 +239,9 @@ header{
                         &::after{
                             background-color: $heading-color;
                             margin-bottom: -45px;
+                            @include resolution-2(){
+                                margin-bottom: unset;
+                            }
                         }
                     }
                 }
@@ -315,7 +318,7 @@ header{
         }
 
         //.header-item children
-        .menu-item{
+        .navbar-menu-item{
             @include font-parameters(400, 18px, 30px, $heading-color);
             @include flex-parameters(column, center, center);
             cursor: pointer;
@@ -324,7 +327,7 @@ header{
             }
         }
         .part-1{
-            @extend .menu-item;
+            @extend .navbar-menu-item;
             background-color: #FFFFFF;
             color: $heading-color;
             padding: 12px 18px;
@@ -385,7 +388,6 @@ header{
     #main-content{
         @include basic-parameters();
         @include flex-parameters(column, flex-start, center);
-
         #page-identifier{
             @include flex-parameters(row, flex-start, flex-start);
             margin-top: -40px;
@@ -424,20 +426,24 @@ header{
             border-radius: 30px;
             position: relative;
             margin-bottom: 40px;
-
             input{
                 @extend #form-mobile;
                 padding: 15px 30px;
                 border: none;
                 box-shadow: 1px 18px 8px -11px #E9EEF3;
             }
-
-            svg{
+            button{
+                height: auto;
+                cursor: pointer;
                 position: absolute;
                 bottom: 15px;
                 right: 15px;
+                background-color: transparent;
+                border: none;
+                svg{
+                    width: 100%;
+                }
             }
-
             @include resolution-1(){
                 display: flex;
             }
@@ -455,17 +461,22 @@ header{
                     width: 100%;
                     padding-bottom: 50px;
                 }
-
+                p{
+                    @include font-parameters(700, 26px, none, $heading-color);
+                    @include resolution-3(){
+                        font-size: 22px;
+                    }
+                }
+                //to all lists in this block
                 ul{
                     width: 100%;
                 }
-
                 #archives-list{
                     padding-top: 40px;
                     b{
                         @include font-parameters(700, unset, 18px, $heading-color);
                     }
-                    li{
+                    .archives-item{
                         padding: 20px 0;
                         .inner-list{
                             @include flex-parameters(row, flex-start, space-between);
@@ -474,7 +485,7 @@ header{
                                 width: 23%;
                                 margin-top: 20px;
                                 line-height: 24px;
-                                background-color: hsl(0, 0%, 100%);
+                                background-color: #FFFFFF;
                                 cursor: pointer;
                                 text-align: center;
                                 border-radius: 4px;
@@ -485,35 +496,35 @@ header{
                                 &:hover{
                                     box-shadow: 1px 18px 8px -11px #D6DCE3;
                                 }
-                            }
-                            a{
-                                @include flex-parameters(row, center, center);
-                                position: relative;
-                                width: 100%;
-                                @include font-parameters(400, unset, 16px, $heading-color);
-                                
-                                &::before {
-                                    display: inline-block;
-                                    position: absolute;
-                                    content: '';
-                                    border-radius: 50%;
-                                    height: 10px;
-                                    width: 10px;
-                                    left: 10px;
-                                    top: 0px;
-                                    background-color: transparent;
-                                }
-                                &:hover{
+                                a{
+                                    @include flex-parameters(row, center, center);
+                                    position: relative;
+                                    width: 100%;
+                                    padding: 20px 0;
+                                    @include font-parameters(400, unset, 16px, $heading-color);
+                                    
                                     &::before {
-                                        background-color: #71B9F9;
-                                        transition: 0.3s;
+                                        display: inline-block;
+                                        position: absolute;
+                                        content: '';
+                                        border-radius: 50%;
+                                        height: 10px;
+                                        width: 10px;
+                                        left: 10px;
+                                        top: 20px;
+                                        background-color: transparent;
+                                    }
+                                    &:hover{
+                                        &::before {
+                                            background-color: #71B9F9;
+                                            transition: 0.3s;
+                                        }
                                     }
                                 }
-                            }
+                            }  
                         }
                     }
                 }
-
             }
             #info-search{
                 @include flex-parameters(column, flex-start, flex-start);
@@ -537,71 +548,64 @@ header{
                         border: none;
                         box-shadow: 1px 18px 8px -11px #E9EEF3;
                     }
-                    svg{
+                    button{
+                        height: auto;
+                        cursor: pointer;
                         position: absolute;
                         bottom: 15px;
                         right: 15px;
+                        background-color: transparent;
+                        border: none;
+                        svg{
+                            width: 100%;
+                        }
                     }
+                }
+                P{
+                    @include font-parameters(700, 24px, 24px, $heading-color);
                 }
                 #information{
                     @include basic-parameters();
                     @include flex-parameters(row, center, space-between);
                     flex-wrap: wrap;
-                    margin: 60px 0 0 -15px;
                     @include resolution-3(){
                         flex-direction: column;
                         margin-left: 0;
                     }
-                    .info-block{
-                        @include flex-parameters(row, center, space-between);
-                        width: 50%;
-                        height: auto;
-                        padding: 15px;
-                        position: relative;
-                        cursor: pointer;
-                        text-decoration: none;
-                        @include resolution-3(){
+                    li{
+                        width: 45%;
+                        margin-top: 30px;
+                        background-color: hsl(0, 0%, 100%);
+                        @include resolution-2(){
                             width: 100%;
-                            padding: 15px 0;
-                        }
-                        .info-name{
-                            @include basic-parameters();
-                            padding: 25px;
-                            background-color: #FFFFFF;
-                            box-shadow: 1px 18px 8px -11px #E9EEF3;
-                            @include font-parameters(400, 18px, 25px, $heading-color);
-                            border-radius: 4px;
-                            @include resolution-2(){
-                                font-size: 16px;
-                            }
                             br{
-                                @include resolution-3(){
-                                    display: none;
-                                }
+                                display: none;
                             }
-                            &::before {
-                                position: absolute;
+                        }
+                        a{
+                            @include flex-parameters(row, center, center);
+                            position: relative;
+                            width: 100%;
+                            padding: 30px 0;
+                            box-shadow: 1px 18px 8px -11px #E9EEF3;
+                            border-radius: 4px;
+                            @include font-parameters(400, unset, 16px, $heading-color);
+                            &::before{
                                 display: inline-block;
+                                position: absolute;
                                 content: '';
                                 border-radius: 50%;
                                 height: 10px;
                                 width: 10px;
-                                left: 25px;
-                                top: 25px;
+                                left: 10px;
+                                top: 10px;
                                 background-color: transparent;
                             }
                             &:hover{
-                                &::before {
-                                    background-color: #71B9F9;
-                                    transition: 0.3s;
-                                }
-                            }
-                            
-                        }
-                        &:hover{
-                            .info-name{
                                 box-shadow: 1px 18px 8px -11px #D6DCE3;
-                                transition: 0.3s;
+                                &::before{
+                                    background-color: #71B9F9;
+                                }
                             }
                         }
                     }
@@ -682,12 +686,11 @@ footer{
                     }
                 }
             }
-
-            a{
+            //for all p,span,a in this block
+            p,span,a{
                 text-decoration: none;
                 color: $heading-color;
                 opacity: 0.6;
-
                 @include resolution-3(){
                     line-height: 18px;
                 }
