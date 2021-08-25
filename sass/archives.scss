@@ -83,6 +83,9 @@ header{
             display: none;
             width: 30%;
             &.mobile {
+                position: fixed;
+                top: 40px;
+                right: 5%;
                 z-index: 99999999;
             }
         }
@@ -473,6 +476,7 @@ header{
                 }
                 p{
                     @include font-parameters(700, 26px, none, $heading-color);
+                    margin-top: 30px;
                     @include resolution-3(){
                         font-size: 22px;
                     }
@@ -512,7 +516,6 @@ header{
                                     width: 100%;
                                     padding: 20px 0;
                                     @include font-parameters(400, unset, 16px, $heading-color);
-                                    
                                     &::before {
                                         display: inline-block;
                                         position: absolute;
@@ -594,12 +597,16 @@ header{
                         }
                         a{
                             @include flex-parameters(row, center, center);
+                            @include font-parameters(400, unset, 16px, $heading-color);
                             position: relative;
                             width: 100%;
                             padding: 30px 0;
                             box-shadow: 1px 18px 8px -11px #E9EEF3;
                             border-radius: 4px;
-                            @include font-parameters(400, unset, 16px, $heading-color);
+                            @include resolution-1(){
+                                justify-content: flex-start;
+                                padding-left: 20px;
+                            }
                             &::before{
                                 display: inline-block;
                                 position: absolute;

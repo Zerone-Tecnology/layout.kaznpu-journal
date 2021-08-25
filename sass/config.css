@@ -13,32 +13,11 @@ img {
   max-width: 100%;
 }
 
-h3 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
-  color: #343651;
-}
-
 ul {
   list-style: none;
 }
 
 a {
   text-decoration: none;
-}
-
-h2 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  color: #343651;
-}
-
-@media (max-width: 712px) {
-  h2 {
-    font-size: 22px;
-  }
 }
 /*# sourceMappingURL=config.css.map */

@@ -13,33 +13,12 @@ img {
   max-width: 100%;
 }
 
-h3 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
-  color: #343651;
-}
-
 ul {
   list-style: none;
 }
 
-a, #main #main-content #main-row-1 #about .about-row .bold {
+a {
   text-decoration: none;
-}
-
-h2 {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  color: #343651;
-}
-
-@media (max-width: 712px) {
-  h2 {
-    font-size: 22px;
-  }
 }
 
 /********************Header********************/
@@ -196,6 +175,9 @@ header #header-content #header-close {
 }
 
 header #header-content #header-close.mobile {
+  position: fixed;
+  top: 40px;
+  right: 5%;
   z-index: 99999999;
 }
 
@@ -310,7 +292,7 @@ header #header-content #header-center #header-menu li {
   }
 }
 
-header #header-content #header-center #header-menu li a, header #header-content #header-center #header-menu li #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row header #header-content #header-center #header-menu li .bold {
+header #header-content #header-center #header-menu li a {
   text-decoration: none;
   color: #343651;
 }
@@ -790,10 +772,18 @@ header #header-content .part-2 {
           box-shadow: 1px 18px 8px -11px #E9EEF3;
 }
 
-#main #main-content #form-mobile svg {
+#main #main-content #form-mobile button {
+  height: auto;
+  cursor: pointer;
   position: absolute;
   bottom: 15px;
   right: 15px;
+  background-color: transparent;
+  border: none;
+}
+
+#main #main-content #form-mobile button svg {
+  width: 100%;
 }
 
 @media (max-width: 1366px) {
@@ -929,6 +919,48 @@ header #header-content .part-2 {
   }
 }
 
+#main #main-content #main-row-1 #about .about-row #about-text h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: unset;
+  color: #343651;
+}
+
+@media (max-width: 712px) {
+  #main #main-content #main-row-1 #about .about-row #about-text h2 {
+    font-size: 22px;
+  }
+}
+
+#main #main-content #main-row-1 #about .about-row #about-text p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  margin-top: 50px;
+}
+
+@media (max-width: 1024px) {
+  #main #main-content #main-row-1 #about .about-row #about-text p {
+    margin-top: 25px;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: 712px) {
+  #main #main-content #main-row-1 #about .about-row #about-text p {
+    line-height: unset;
+  }
+}
+
+@media (max-width: 1024px) {
+  #main #main-content #main-row-1 #about .about-row #about-text p br {
+    display: none;
+  }
+}
+
 #main #main-content #main-row-1 #about .about-row .authorship-column {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -961,6 +993,11 @@ header #header-content .part-2 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
   margin-top: 50px;
 }
 
@@ -968,6 +1005,14 @@ header #header-content .part-2 {
   #main #main-content #main-row-1 #about .about-row .authorship-column div {
     margin-top: 20px;
   }
+}
+
+#main #main-content #main-row-1 #about .about-row .authorship-column div strong {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
 }
 
 #main #main-content #main-row-1 #about .about-row #column-1 {
@@ -1002,42 +1047,6 @@ header #header-content .part-2 {
   #main #main-content #main-row-1 #about .about-row #column-2 {
     width: 50%;
   }
-}
-
-#main #main-content #main-row-1 #about .about-row p, #main #main-content #main-row-1 #about .about-row a, #main #main-content #main-row-1 #about .about-row .bold {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: #000000;
-  margin-top: 50px;
-}
-
-@media (max-width: 1024px) {
-  #main #main-content #main-row-1 #about .about-row p, #main #main-content #main-row-1 #about .about-row a, #main #main-content #main-row-1 #about .about-row .bold {
-    margin-top: 25px;
-    line-height: 21px;
-  }
-}
-
-@media (max-width: 712px) {
-  #main #main-content #main-row-1 #about .about-row p, #main #main-content #main-row-1 #about .about-row a, #main #main-content #main-row-1 #about .about-row .bold {
-    line-height: unset;
-  }
-}
-
-@media (max-width: 1024px) {
-  #main #main-content #main-row-1 #about .about-row p br, #main #main-content #main-row-1 #about .about-row a br, #main #main-content #main-row-1 #about .about-row .bold br {
-    display: none;
-  }
-}
-
-#main #main-content #main-row-1 #about .about-row a, #main #main-content #main-row-1 #about .about-row .bold {
-  margin: 0;
-}
-
-#main #main-content #main-row-1 #about .about-row .bold {
-  font-weight: 700;
 }
 
 @media (max-width: 712px) {
@@ -1160,7 +1169,7 @@ header #header-content .part-2 {
   }
 }
 
-#main #main-content #main-row-1 #info-search #information li a, #main #main-content #main-row-1 #info-search #information li #about .about-row .bold, #main #main-content #main-row-1 #about .about-row #info-search #information li .bold {
+#main #main-content #main-row-1 #info-search #information li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1174,20 +1183,29 @@ header #header-content .part-2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: unset;
+  line-height: 16px;
+  color: #343651;
   position: relative;
   width: 100%;
   padding: 30px 0;
   -webkit-box-shadow: 1px 18px 8px -11px #E9EEF3;
           box-shadow: 1px 18px 8px -11px #E9EEF3;
   border-radius: 4px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: unset;
-  line-height: 16px;
-  color: #343651;
 }
 
-#main #main-content #main-row-1 #info-search #information li a::before, #main #main-content #main-row-1 #info-search #information li #about .about-row .bold::before, #main #main-content #main-row-1 #about .about-row #info-search #information li .bold::before {
+@media (max-width: 1366px) {
+  #main #main-content #main-row-1 #info-search #information li a {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-left: 20px;
+  }
+}
+
+#main #main-content #main-row-1 #info-search #information li a::before {
   display: inline-block;
   position: absolute;
   content: '';
@@ -1199,12 +1217,12 @@ header #header-content .part-2 {
   background-color: transparent;
 }
 
-#main #main-content #main-row-1 #info-search #information li a:hover, #main #main-content #main-row-1 #info-search #information li #about .about-row .bold:hover, #main #main-content #main-row-1 #about .about-row #info-search #information li .bold:hover {
+#main #main-content #main-row-1 #info-search #information li a:hover {
   -webkit-box-shadow: 1px 18px 8px -11px #D6DCE3;
           box-shadow: 1px 18px 8px -11px #D6DCE3;
 }
 
-#main #main-content #main-row-1 #info-search #information li a:hover::before, #main #main-content #main-row-1 #info-search #information li #about .about-row .bold:hover::before, #main #main-content #main-row-1 #about .about-row #info-search #information li .bold:hover::before {
+#main #main-content #main-row-1 #info-search #information li a:hover::before {
   background-color: #71B9F9;
 }
 
@@ -1235,6 +1253,14 @@ header #header-content .part-2 {
 #main #main-content #main-row-2 #indexing {
   width: 100%;
   height: auto;
+}
+
+#main #main-content #main-row-2 #indexing p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #343651;
 }
 
 #main #main-content #main-row-2 #indexing .swiper-container {
@@ -1275,7 +1301,7 @@ header #header-content .part-2 {
           justify-content: space-between;
 }
 
-#main #main-content #main-row-2 #indexing .swiper-container .swiper-wrapper a, #main #main-content #main-row-2 #indexing .swiper-container .swiper-wrapper #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row #main-row-2 #indexing .swiper-container .swiper-wrapper .bold {
+#main #main-content #main-row-2 #indexing .swiper-container .swiper-wrapper a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1292,7 +1318,7 @@ header #header-content .part-2 {
   cursor: pointer;
 }
 
-#main #main-content #main-row-2 #indexing .swiper-container .swiper-wrapper a img, #main #main-content #main-row-2 #indexing .swiper-container .swiper-wrapper #main-row-1 #about .about-row .bold img, #main #main-content #main-row-1 #about .about-row #main-row-2 #indexing .swiper-container .swiper-wrapper .bold img {
+#main #main-content #main-row-2 #indexing .swiper-container .swiper-wrapper a img {
   width: 120px;
   height: auto;
   margin: 15px;
@@ -1300,7 +1326,7 @@ header #header-content .part-2 {
           filter: grayscale(90%);
 }
 
-#main #main-content #main-row-2 #indexing .swiper-container .swiper-wrapper a img:hover, #main #main-content #main-row-2 #indexing .swiper-container .swiper-wrapper #main-row-1 #about .about-row .bold img:hover, #main #main-content #main-row-1 #about .about-row #main-row-2 #indexing .swiper-container .swiper-wrapper .bold img:hover {
+#main #main-content #main-row-2 #indexing .swiper-container .swiper-wrapper a img:hover {
   -webkit-filter: unset;
           filter: unset;
 }
@@ -1523,14 +1549,14 @@ footer #footer-content #footer-2 #footer-2-2 #developers-name {
   }
 }
 
-footer #footer-content #footer-2 p, footer #footer-content #footer-2 #main #main-content #main-row-1 #about .about-row a, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-2 a, footer #footer-content #footer-2 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-2 .bold, footer #footer-content #footer-2 span, footer #footer-content #footer-2 a, footer #footer-content #footer-2 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-2 .bold {
+footer #footer-content #footer-2 p, footer #footer-content #footer-2 span, footer #footer-content #footer-2 a {
   text-decoration: none;
   color: #343651;
   opacity: 0.6;
 }
 
 @media (max-width: 712px) {
-  footer #footer-content #footer-2 p, footer #footer-content #footer-2 #main #main-content #main-row-1 #about .about-row a, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-2 a, footer #footer-content #footer-2 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-2 .bold, footer #footer-content #footer-2 span, footer #footer-content #footer-2 a, footer #footer-content #footer-2 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-2 .bold {
+  footer #footer-content #footer-2 p, footer #footer-content #footer-2 span, footer #footer-content #footer-2 a {
     line-height: 18px;
   }
 }
@@ -1552,7 +1578,7 @@ footer #footer-content #footer-3 {
           justify-content: flex-end;
 }
 
-footer #footer-content #footer-3 a, footer #footer-content #footer-3 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-3 .bold {
+footer #footer-content #footer-3 a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1573,7 +1599,7 @@ footer #footer-content #footer-3 a, footer #footer-content #footer-3 #main #main
 }
 
 @media (max-width: 1024px) {
-  footer #footer-content #footer-3 a, footer #footer-content #footer-3 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-3 .bold {
+  footer #footer-content #footer-3 a {
     width: 30px;
     height: 30px;
     margin-bottom: 20px;
@@ -1581,13 +1607,13 @@ footer #footer-content #footer-3 a, footer #footer-content #footer-3 #main #main
 }
 
 @media (max-width: 712px) {
-  footer #footer-content #footer-3 a, footer #footer-content #footer-3 #main #main-content #main-row-1 #about .about-row .bold, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-3 .bold {
+  footer #footer-content #footer-3 a {
     width: 20px;
     height: 20px;
   }
 }
 
-footer #footer-content #footer-3 a:hover, footer #footer-content #footer-3 #main #main-content #main-row-1 #about .about-row .bold:hover, #main #main-content #main-row-1 #about .about-row footer #footer-content #footer-3 .bold:hover {
+footer #footer-content #footer-3 a:hover {
   -webkit-box-shadow: 1px 18px 8px -11px #E9EEF3;
           box-shadow: 1px 18px 8px -11px #E9EEF3;
 }
