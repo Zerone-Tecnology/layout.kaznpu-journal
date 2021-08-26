@@ -42,7 +42,7 @@ header{
     background: $gradient-header-1;
     @include resolution-1(){
         padding: $paddingUD 5%;
-    }   
+    } 
     #header-content{
         @include basic-parameters();
         @include flex-parameters(row, center, space-between);
@@ -70,31 +70,192 @@ header{
                  width: 30%;
              }
         }
-        #header-burger{
-            @include flex-parameters(row, center, flex-end);
-            display: none;
-            width: 30%;
-            @include resolution-2(){
-                display: flex;
-            }
-        }
-        #header-close{
-            @include flex-parameters(row, center, flex-end);
-            display: none;
-            width: 30%;
-            &.mobile {
-                position: fixed;
-                top: 40px;
-                right: 5%;
-                z-index: 99999999;
-            }
-        }
         #header-center{
             @include flex-parameters(column, flex-start, flex-end);
             width: 60%;
             @include resolution-2(){
-                @include flex-parameters(row, center, space-between);
+                @include flex-parameters(column, center, space-between);
                 width: 100%;
+            }
+            #burger{
+                position: absolute;
+                top: $paddingUD;
+                right: 5%;
+                img{
+                    width: 50px;
+                    height: auto;
+                    @include resolution-3(){
+                        width: 30px;
+                    }
+                }
+            }
+            .toggle, [id^=drop] {
+                display: none;
+            }
+            .menu{
+                @include flex-parameters(row, center, space-between);
+                margin-top: 40px;
+                width: 100%;
+            }
+            nav { 
+                width: 100%;
+            }
+            nav:after {
+                content:"";
+                display:table;
+                clear:both;
+            }
+            nav ul {
+                float: right;
+                list-style: none;
+            }
+            nav ul li {
+                display:inline-block;
+            }
+            nav a {
+                display:block;
+                text-decoration:none;
+            }
+            nav ul li ul li:hover { 
+              background-color: #FFFFFF; 
+            }
+            
+            .menu-item{
+                position: relative;
+                @include flex-parameters(row, center , center);
+                @include resolution-2(){
+                    flex-direction: column;
+                }
+                &::after{
+                    position: absolute;
+                    display: inline-block;
+                    content: '';
+                    z-index: 9999999999;
+                    border-radius: 50%;
+                    height: 10px;
+                    width: 10px;
+                    margin-bottom: -90px;
+                    background-color: transparent;
+                    
+                }
+                &:hover { 
+                    &::after{
+                        background-color: $heading-color;
+                        @include resolution-2(){
+                            background-color: transparent;
+                        }
+                    }
+                }
+                ul{
+                    padding: 30px 0px;
+                    z-index: 999999999;
+                    @include resolution-2(){
+                        padding: 0;
+                    }
+                    li{
+                        @include flex-parameters(row, center, flex-start);
+                        background-color: #FFFFFF;
+                        padding: 20px;
+                        @include resolution-2(){
+                            padding: 0;
+                            justify-content: center;
+                        }
+                        &::before{
+                            position: absolute;
+                            display: inline-block;
+                            content: '';
+                            border-radius: 50%;
+                            height: 10px;
+                            width: 10px;
+                            background-color: transparent;
+                            margin-left: -18px;
+                        }
+                        &:hover{
+                            &::before{
+                                background-color: #71B9F9;
+                                @include resolution-2(){
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            nav ul ul {
+                display: none;
+                position: absolute; 
+                top: 100%; 
+                left: 0px;
+            }
+            
+            nav ul li:hover > ul {
+                @include flex-parameters(column, flex-start, center);
+                width: 320px;
+            }  
+            nav ul ul li {
+                width: 100%;
+                float:none;
+                display:list-item;
+                position: relative;
+            }
+            
+            @include resolution-2() {
+                nav {
+                    margin: 0;
+                    width: 100%;
+                }
+                .toggle + a,
+                .menu {
+                    width: 100%;
+                    display: none;
+                    background-color: #FFFFFF;
+                    border-radius: 4px;
+                    padding: 20px;
+                }
+                #burger{
+                    width: auto;
+                    float: right;
+                }
+                .toggle {
+                    display: block;
+                    text-decoration: none;
+                    border: none;
+                    text-align: center;
+                    padding: 10px 0;
+                }   
+                [id^=drop]:checked + ul {
+                    display: block;
+                }
+                nav ul li {
+                    display: block;
+                    width: 100%;
+                }
+                nav a:hover{
+                    background-color: #F4F6F8;
+                }
+                nav ul ul a{
+                    width: 100%;
+                    font-size: 14px;
+                    text-align: center;
+                }
+                nav ul ul {
+                    width: 100%;
+                    float: none;
+                    position:static;
+                    li{
+                        width: 100%;
+                        left: auto;
+                        text-align: center;
+                    }
+                } 
+                nav ul ul li:hover > ul,
+                nav ul li:hover > ul {
+                    display: none;
+                }
+                nav .menu ul li {
+                    display: block;
+                    width: 100%;
+                }
             }
             #header-text{
                 @include resolution-2(){
@@ -118,117 +279,9 @@ header{
                         font-size: 22px;
                     }
                 }
-            }
-            #header-menu{
-                @include basic-parameters();
-                @include flex-parameters(row, center, space-between);
-                margin-top: 40px;
-                li{
-                    position: relative;
-                    a{
-                        text-decoration: none;
-                        color: $heading-color;
-                    }
-                    &:hover{
-                        .dropdown-content{
-                            display: block;
-                        }
-                    }
-                    .navbar-menu-link{
-                        @include flex-parameters(column, center, center);
-                        border: none;
-                        cursor: pointer;
-                        &::after {
-                            position: absolute;
-                            display: inline-block;
-                            content: '';
-                            z-index: 99999;
-                            border-radius: 50%;
-                            height: 10px;
-                            width: 10px;
-                            margin-bottom: -90px;
-                            background-color: transparent;
-                        }
-                        &:hover{
-                            &::after {
-                                background-color: $heading-color;
-                                opacity: 0.2;
-                                transition: 0.3s;
-                            }
-                        }
-                    }
-                    .dropdown-content {
-                        display: none;
-                        position: absolute;
-                        min-width: 320px;
-                        z-index: 9999;
-                        background-color: transparent;
-                        padding-top: 30px;
-                        top: 100%;
-                        left: 0;
-                        box-shadow: 0px 35px 30px -25px #E6EAF0;
-                        border-radius: 4px;
-                        li {
-                            @include flex-parameters(row, center, flex-start);
-                            background-color: #FFFFFF;
-                            padding: 12px 28px;
-                            &::before{
-                                position: absolute;
-                                display: inline-block;
-                                content: '';
-                                border-radius: 50%;
-                                height: 10px;
-                                width: 10px;
-                                background-color: transparent;
-                                margin-left: -18px;
-                            }
-                            &:hover{
-                                &::before{
-                                    background-color: #71B9F9;
-                                }
-                            }
-                        }
-                    }
-                    #this-page{
-                        &::after{
-                            background-color: $heading-color;
-                            margin-bottom: -45px;
-                        }
-                    }
-                }
-                @include resolution-2(){
-                    @include flex-parameters(column, center, flex-start);
-                    width: 100%;
-                    padding: 20px;
-                    background-color: #ffffffee;
-                    position: absolute;
-                    margin-top: -200%;
-                }
-                &.mobile {
-                    position: fixed; 
-                    height: 100vh;
-                    z-index: 9999;
-                    margin: auto 0;
-                    left: 0;
-                    top: 0;
-                    padding-top: 25%;
-                    width: 100%;
-                    animation: fadeIn 0.3s;
-                    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-                    transform-origin: 100% 100%;
-                    @keyframes fadeIn {
-                        0% {
-                            transform: translateY(100);    
-                            margin-top: -100%; 
-                        }   
-                        100% {
-                            transform: translateY(0);
-                            margin-top: auto;   
-                        } 
-                    }
-                }
-            }          
+            }        
         }
+        
         #header-right{
             @include flex-parameters(column, flex-end, space-between);
             width: 20%;
@@ -270,16 +323,16 @@ header{
         }
 
         //.header-item children
-        .navbar-menu-item{
+        .menu-item {
             @include font-parameters(400, 18px, 30px, $heading-color);
             @include flex-parameters(column, center, center);
             cursor: pointer;
-            @include resolution-2(){
-                padding: 15px;
+            a{
+                color: $heading-color;
             }
         }
         .part-1{
-            @extend .navbar-menu-item;
+            @extend .menu-item;
             background-color: #FFFFFF;
             color: $heading-color;
             padding: 12px 18px;
@@ -333,7 +386,7 @@ header{
     @include flex-parameters(row, center, center);
     padding: 80px $paddingLR;
     background-color: #F4F6F8;
-    position: relative;
+    // position: relative;
     @include resolution-1(){
         padding: $paddingUD 5%;
     }

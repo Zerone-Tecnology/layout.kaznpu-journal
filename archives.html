@@ -26,55 +26,78 @@
                         <img src="images/logo.png"/>
                     </a>
                 </div>
-                <div id="header-burger"><img src="images/icon-hamburger.svg" onclick="displayMenu()"/></div>
-                <div id="header-close"><img src="images/icon-close.svg" onclick="closeMenu()"/></div>
                 <div class="header-item" id="header-center">
                     <div id="header-text">
                         <span class="header-center-item">Казахский национальный педагогический университет имени Абая</span>
                         <h1 class="header-center-item">Научный журнал Вестник</h1>
                     </div>
-                    <ul class="header-center-item" id="header-menu">
-                        <li class="navbar-menu-item">
-                            <a href="index.html" class="navbar-menu-link">О журнале</a>
-                            <ul class="dropdown-content">
-                                <li><a href="#">item</a></li>
-                                <li><a href="#">item</a></li>
-                                <li><a href="#">item</a></li>
-                            </ul>
-                        </li>
-                        <li class="navbar-menu-item">
-                            <a href="#" class="navbar-menu-link">Текущий выпуск</a>
-                            <ul class="dropdown-content">
-                                <li><a href="#">item</a></li>
-                                <li><a href="#">item</a></li>
-                                <li><a href="#">item</a></li>
-                            </ul>
-                        </li>
-                        <li class="navbar-menu-item">
-                            <a href="archives.html" id="this-page"  class="navbar-menu-link">Архивы</a>
-                            <ul class="dropdown-content">
-                                <li><a href="#">item</a></li>
-                                <li><a href="#">item</a></li>
-                                <li><a href="#">item</a></li>
-                            </ul>
-                        </li>
-                        <li class="navbar-menu-item">
-                            <a href="#" class="navbar-menu-link">Руководство</a>
-                            <ul class="dropdown-content">
-                                <li><a href="#">item</a></li>
-                                <li><a href="#">item</a></li>
-                                <li><a href="#">item</a></li>
-                            </ul>
-                        </li>
-                        <li class="navbar-menu-item">
-                            <a href="#" class="navbar-menu-link">Объявления</a>
-                            <ul class="dropdown-content">
-                                <li><a href="#">item</a></li>
-                                <li><a href="#">item</a></li>
-                                <li><a href="#">item</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+
+                    <nav>
+
+                        <label for="drop" class="toggle" id="burger">
+                          <img src="images/icon-hamburger.svg" alt="menu display button">
+                        </label>
+                        <input type="checkbox" id="drop"/>
+                
+                        <ul class="menu">
+                
+                            <li class="menu-item">
+                              <label for="drop-1" class="toggle">О журнале</label>
+                              <a href="index.html">О журнале</a>
+                              <input type="checkbox" id="drop-1"/>
+                              <ul>
+                                  <li><a href="#">item 1</a></li>
+                                  <li><a href="#">item 2</a></li>
+                                  <li><a href="#">item 3</a></li>
+                              </ul> 
+                            </li>
+                
+                            <li class="menu-item">
+                                <label for="drop-2" class="toggle">Текущий выпуск</label>
+                                <a href="#">Текущий выпуск</a>
+                                <input type="checkbox" id="drop-2"/>
+                                <ul>
+                                    <li><a href="#">item 4</a></li>
+                                    <li><a href="#">item 5</a></li>
+                                    <li><a href="#">item 6</a></li>
+                                </ul> 
+                            </li>
+                
+                            <li class="menu-item">
+                              <label for="drop-3" class="toggle">Архивы</label>
+                              <a href="archives.html">Архивы</a>
+                              <input type="checkbox" id="drop-3"/>
+                              <ul>
+                                <li><a href="#">item 7</a></li>
+                                <li><a href="#">item 8</a></li>
+                                <li><a href="#">item 9</a></li>
+                              </ul> 
+                            </li>
+                
+                            <li class="menu-item">
+                              <label for="drop-4" class="toggle">Руководство</label>
+                              <a href="#">Руководство</a>
+                              <input type="checkbox" id="drop-4"/>
+                              <ul>
+                                <li><a href="#">item 10</a></li>
+                                <li><a href="#">item 11</a></li>
+                                <li><a href="#">item 12</a></li>
+                              </ul> 
+                            </li>
+                
+                            <li class="menu-item">
+                              <label for="drop-5" class="toggle">Объявления</label>
+                              <a href="#">Объявления</a>
+                              <input type="checkbox" id="drop-5"/>
+                              <ul>
+                                <li><a href="#">item 13</a></li>
+                                <li><a href="#">item 14</a></li>
+                                <li><a href="#">item 15</a></li>
+                              </ul> 
+                            </li>
+                
+                    </ul>            
+                 </nav>
                 </div>
                 <div class="header-item" id="header-right">
                     <ul class="header-right-item">
