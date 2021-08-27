@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Научный журнал Вестник</title>
+
+        <!--CSS-->
+        <link rel="stylesheet" href="sass/hissoc.css"/>
+
+        <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+        <!--Swiper-->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    </head>
+
+    <body>
+        <header id="top"> 
+            <div id="header-content">
+                <div class="header-item" id="header-left">
+                    <a href="index.html" id="logo">
+                        <img src="images/logo2.png" alt="Logo"/>
+                    </a>
+                </div>
+                <div class="header-item" id="header-center">
+                    <div id="header-text">
+                        <span class="header-center-item">Казахский национальный педагогический университет имени Абая</span>
+                        <h1 class="header-center-item">Научный журнал Вестник</h1>
+                    </div>
+
+                    <nav>
+
+                        <label for="drop" class="toggle" id="burger">
+                          <img src="images/icon-hamburger.svg" alt="menu display button">
+                        </label>
+                        <input type="checkbox" id="drop"/>
+                
+                          <ul class="menu">
+                
+                            <li class="menu-item">
+                              <label for="drop-1" class="toggle">О журнале</label>
+                              <a href="index.html">О журнале</a>
+                              <input type="checkbox" id="drop-1"/>
+                              <ul>
+                                  <li><a href="#">item 1</a></li>
+                                  <li><a href="#">item 2</a></li>
+                                  <li><a href="#">item 3</a></li>
+                              </ul> 
+                            </li>
+                
+                            <li class="menu-item">
+                                <label for="drop-2" class="toggle">Текущий выпуск</label>
+                                <a href="#">Текущий выпуск</a>
+                                <input type="checkbox" id="drop-2"/>
+                                <ul>
+                                    <li><a href="#">item 4</a></li>
+                                    <li><a href="#">item 5</a></li>
+                                    <li><a href="#">item 6</a></li>
+                                </ul> 
+                            </li>
+                
+                            <li class="menu-item">
+                              <label for="drop-3" class="toggle">Архивы</label>
+                              <a href="archives.html">Архивы</a>
+                              <input type="checkbox" id="drop-3"/>
+                              <ul>
+                                <li><a href="#">item 7</a></li>
+                                <li><a href="#">item 8</a></li>
+                                <li><a href="#">item 9</a></li>
+                              </ul> 
+                            </li>
+                
+                            <li class="menu-item">
+                              <label for="drop-4" class="toggle">Руководство</label>
+                              <a href="#">Руководство</a>
+                              <input type="checkbox" id="drop-4"/>
+                              <ul>
+                                <li><a href="#">item 10</a></li>
+                                <li><a href="#">item 11</a></li>
+                                <li><a href="#">item 12</a></li>
+                              </ul> 
+                            </li>
+                
+                            <li class="menu-item">
+                              <label for="drop-5" class="toggle">Объявления</label>
+                              <a href="#">Объявления</a>
+                              <input type="checkbox" id="drop-5"/>
+                              <ul>
+                                <li><a href="#">item 13</a></li>
+                                <li><a href="#">item 14</a></li>
+                                <li><a href="#">item 15</a></li>
+                              </ul> 
+                            </li>
+                
+                          </ul>
+
+                    
+                </nav>
+                </div>
+                <div class="header-item" id="header-right">
+                    <ul class="header-right-item">
+                        <li><a class="part-1">Регистрация</a></li>
+                        <li><a class="part-1 current">Вход</a></li>
+                    </ul>
+                    <ul class="header-right-item">
+                        <li><a class="part-2">Қаз</a></li>
+                        <li><a class="part-2 current">Рус</a></li>
+                        <li><a class="part-2">Eng</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+
+
+        <section id="main">
+            <div id="main-content">
+
+                <form id="form-mobile">
+                    <input type="text" placeholder="Search">
+                    <button>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="main-row" id="main-row-1">
+                    
+                    <div id="about">
+                        <div class="about-row" id="layer-block">
+                            <div id="about-image">
+                                <img src="images/layer.png"/>
+                            </div>
+                            <div id="about-text">
+                                <h2>Серия "Психология"</h2>
+                                <p>
+                                    Научный журнал «Вестник КазНПУ им. Абая, <br/>
+                                    серия «Физико-математические науки» является <br/>
+                                    научно-образовательным изданием по актуальным вопросам <br/>
+                                    математики, механики и физики, информатики, а также <br/>
+                                    информатизации образования и методике преподавания <br/>
+                                    физико-математических дисциплин в школе, колледже и вузе.</p>
+                            </div>
+                        </div>
+                        <div class="about-row">
+                            <div class="authorship-column" id="column-1">
+                                <div>
+                                    <strong>Научный редактор</strong>
+                                    М.А. Бектемесов
+                                </div>
+                                <div>
+                                    <strong>Ответственный секретарь</strong>
+                                    Ш.Т. Шекербекова,<br/>Г.А. Абдулкаримова
+                                </div>
+                            </div>
+                            <div class="authorship-column" id="column-2">
+                                <div>
+                                    <span><strong>ISSN: </strong>1728-7847</span>
+                                    <span><strong>ППИ: </strong>74231</span>
+                                </div>
+                                <div>
+                                    <strong>Издатель</strong>
+                                    "Казахский национальный <br />
+                                    педагогический университет <br />
+                                    имени Абая" <br />
+                                    kaznpu.kz
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="info-search">
+                        <div id="search">
+                            <form>
+                                <input type="text" placeholder="Search">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                        <p>Информация</p>
+                        <ul id="information">
+                            <li><a href="#">Для<br/> читателей</a></li>
+                            <li><a href="#">Для<br/> авторов</a></li>
+                            <li><a href="#">Для<br/> библиотек</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="main-row" id="main-row-2">
+                    <div id="indexing">
+                        <p>Индексирование журнала</p>
+                        <div class="swiper-container mySwiper">
+                            <div class="swiper-wrapper">
+                                <a class="swiper-slide" href="#"><img src="images/monrknew1.png"/></a>
+                                <a class="swiper-slide" href="#"><img src="images/sciencenew.png"/></a>
+                                <a class="swiper-slide" href="#"><img src="images/doinew.png"/></a>
+                                <a class="swiper-slide" href="#"><img src="images/crossnew2.png"/></a>
+                                <a class="swiper-slide" href="#"><img src="images/НЦГНТЭ.png"/></a>
+                                <a class="swiper-slide" href="#"><img src="images/strike.png"/></a>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div id="footer-content">
+                <div class="footer-item" id="footer-1">
+                    <img src="images/logo.png"/>
+                </div>
+                <div class="footer-item" id="footer-2">
+                    <div id="footer-2-1">
+                        <p id="requisites">
+                            Банковские реквизиты: <br/>
+                            НАО «Казахский национальный <br/>
+                            педагогический университет имени Абая» <br/>
+                            Адрес: 050010, г.Алматы, пр.Достык, 13 <br/>
+                            БИН 031240004969 <br/>
+                            БИК KCJBKZKX <br/>
+                            ИИК 178560000000086696 <br/>
+                            АО «Банк Центр Кредит» г.Алматы <br/>
+                            КБЕ 16<br/>
+                        </p>
+                        <div id="address">
+                            <p>КазНПУ имени Абая<br/> 050010, г.Алматы, пр.Достык, 13</p>
+                            <span>e-mail: <a href ="mailto: pedagogika@abaiuniver.kz">pedagogika@abaiuniver.kz</a></span>
+                        </div>
+                    </div>
+
+                    <div id="footer-2-2">
+                        <p id="editors-name">Издательство «Ұлағат» КазНПУ имени Абая</p>
+                        <div id="developers-name">
+                            <p>Разработка сайта — Zerone Technology</p>
+                            <img src="images/zerone.png" style="margin-left: 5px;"/>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="footer-item" id="footer-3">
+                    <a href="#top"><img src="images/vector3.png"></a>
+                </div>
+            </div>
+        </footer>
+
+        <!--Library for swiper-->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- main Script -->
+        <script src="script.js"></script>
+
+    </body>
+</html>
