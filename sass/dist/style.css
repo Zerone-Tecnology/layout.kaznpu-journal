@@ -178,21 +178,18 @@ header.color-4 #header-content #header-center .menu-item a, header.color-4 #head
 header.color-4 #header-content #header-center .menu-item:hover::after, header.color-4 #header-content #header-center .part-1:hover::after, header.color-4 #header-content #header-center .part-2:hover::after {
   background-color: #FFFFFF;
 }
-header.color-4 #header-content #header-center .menu-item .dropdown-menu, header.color-4 #header-content #header-center .part-1 .dropdown-menu, header.color-4 #header-content #header-center .part-2 .dropdown-menu {
-  background-color: #247986;
+header.color-4 #header-content #header-center .menu-item .dropdown-menu a, header.color-4 #header-content #header-center .part-1 .dropdown-menu a, header.color-4 #header-content #header-center .part-2 .dropdown-menu a {
+  color: #000000;
 }
-header.color-4 #header-content #header-center .menu-item .dropdown-menu a, header.color-4 #header-content #header-center .part-1 .dropdown-menu a, header.color-4 #header-content #header-center .part-2 .dropdown-menu a,
-header.color-4 #header-content #header-center .menu-item ul li,
-header.color-4 #header-content #header-center .part-1 ul li,
-header.color-4 #header-content #header-center .part-2 ul li {
+header.color-4 #header-content #header-center .menu-item ul li, header.color-4 #header-content #header-center .part-1 ul li, header.color-4 #header-content #header-center .part-2 ul li {
   border: none;
   background-color: #247986;
 }
-header.color-4 #header-content #header-center .menu-item .dropdown-menu a:hover::before, header.color-4 #header-content #header-center .part-1 .dropdown-menu a:hover::before, header.color-4 #header-content #header-center .part-2 .dropdown-menu a:hover::before,
-header.color-4 #header-content #header-center .menu-item ul li:hover::before,
-header.color-4 #header-content #header-center .part-1 ul li:hover::before,
-header.color-4 #header-content #header-center .part-2 ul li:hover::before {
+header.color-4 #header-content #header-center .menu-item ul li:hover::before, header.color-4 #header-content #header-center .part-1 ul li:hover::before, header.color-4 #header-content #header-center .part-2 ul li:hover::before {
   background-color: #FFFFFF;
+}
+header.color-4 #header-content #header-center .nav__dropdown .menu-item a, header.color-4 #header-content #header-center .nav__dropdown .part-1 a, header.color-4 #header-content #header-center .nav__dropdown .part-2 a {
+  color: #000;
 }
 header.color-4 #header-content .part-1:hover, header.color-4 #header-content .part-2:hover {
   box-shadow: 1px 18px 8px -11px #134c54;
@@ -1727,6 +1724,7 @@ nav .main-menu ul.priority-nav__dropdown li:hover::before {
 }
 nav .menu {
   width: auto;
+  margin-bottom: 0;
 }
 nav .menu li {
   display: inline-block;
@@ -1738,14 +1736,14 @@ nav .menu li {
 nav .menu li:hover > ul {
   display: block;
 }
-nav .menu li.has-child:hover::before {
+nav .menu li.dropdown:hover::before {
   border-top-color: #343651;
   border-right-color: #343651;
   border-bottom-color: #343651;
   border-left-color: #343651;
   transform: rotate(180deg);
 }
-nav .menu li.has-child::before {
+nav .menu li.dropdown::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -1761,24 +1759,28 @@ nav .menu li.has-child::before {
   border-radius: 50%;
   transition: all 0.5s ease-in-out;
 }
-nav .menu ul {
+nav .menu ul, nav .menu .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 100% !important;
   z-index: 9;
   background-color: #fff;
   width: 320px;
   padding-top: 30px;
   box-shadow: 0px 35px 30px -25px #E6EAF0;
   border-radius: 4px;
+  transform: none !important;
 }
-nav .menu ul > li {
+nav .menu ul.show, nav .menu .dropdown-menu.show {
+  display: block;
+}
+nav .menu ul > li, nav .menu ul a, nav .menu .dropdown-menu > li, nav .menu .dropdown-menu a {
   display: block;
   position: relative;
   text-align: left;
   padding-left: 35px;
 }
-nav .menu ul > li::before {
+nav .menu ul > li::before, nav .menu ul a::before, nav .menu .dropdown-menu > li::before, nav .menu .dropdown-menu a::before {
   content: "";
   position: absolute;
   top: 15%;
@@ -1789,7 +1791,7 @@ nav .menu ul > li::before {
   background-color: transparent;
   transition: all 0.5s ease-in-out;
 }
-nav .menu ul > li:hover::before {
+nav .menu ul > li:hover::before, nav .menu ul a:hover::before, nav .menu .dropdown-menu > li:hover::before, nav .menu .dropdown-menu a:hover::before {
   background-color: #71B9F9;
 }
 
@@ -1804,7 +1806,9 @@ nav .menu ul > li:hover::before {
 .mmenu {
   display: none;
   position: absolute;
-  top: 45px;
+  width: 30px;
+  height: 30px;
+  top: 15px;
   right: 5%;
 }
 
@@ -1828,10 +1832,10 @@ nav .menu ul > li:hover::before {
   nav .main-menu ul {
     text-align: center;
   }
-  nav .main-menu ul li.has-child {
+  nav .main-menu ul li.dropdown {
     padding-bottom: 0;
   }
-  nav .main-menu ul li.has-child::before, nav .main-menu ul li.has-child::after {
+  nav .main-menu ul li.dropdown::before, nav .main-menu ul li.dropdown::after {
     content: none;
   }
   nav .main-menu ul > li {
