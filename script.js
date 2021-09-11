@@ -20,21 +20,35 @@ var swiper = new Swiper(".mySwiper", {
         },
     },
 });
-var closeIcon=document.getElementById("header-close");
-var hamburger=document.getElementById("header-burger");
-var menu=document.getElementById("header-menu");
+// var closeIcon=document.getElementById("header-close");
+// var hamburger=document.getElementById("header-burger");
+// var menu=document.getElementById("header-menu");
 
-function displayMenu(){
-    closeIcon.style.display="flex";
-    hamburger.style.display="none";
-    closeIcon.classList.add('mobile')
-    hamburger.classList.add('mobile')
-    menu.classList.add('mobile')
-} 
-function closeMenu(){
-    closeIcon.style.display="none";
-    hamburger.style.display="flex";
-    closeIcon.classList.remove('mobile')
-    hamburger.classList.remove('mobile')
-    menu.classList.remove('mobile')
+// function displayMenu(){
+//     closeIcon.style.display="flex";
+//     hamburger.style.display="none";
+//     closeIcon.classList.add('mobile')
+//     hamburger.classList.add('mobile')
+//     menu.classList.add('mobile')
+// } 
+// function closeMenu(){
+//     closeIcon.style.display="none";
+//     hamburger.style.display="flex";
+//     closeIcon.classList.remove('mobile')
+//     hamburger.classList.remove('mobile')
+//     menu.classList.remove('mobile')
+// }
+let mmenu = document.querySelector('.mmenu');
+mmenu.onclick =  function(){
+    document.querySelector('.main-menu').classList.toggle('show');
+};
+
+const width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+if(width >= 1024){
+    var nav = priorityNav.init({
+        mainNavWrapper: ".main-menu",
+        breakPoint: 0,
+        throttleDelay: '50',
+        navDropdownLabel: "&#8250;"
+    });
 }
