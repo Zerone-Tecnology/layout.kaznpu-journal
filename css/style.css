@@ -78,10 +78,6 @@ header.color-2 #header-content #header-center .menu-item a, header.color-2 #head
 }
 
 header.color-2 #header-content #header-center .menu-item:hover::after, header.color-2 #header-content #header-center .part-1:hover::after, header.color-2 #header-content #header-center .part-2:hover::after {
-  background-color: #FFFFFF;
-}
-
-header.color-2 #header-content #header-center .menu-item .dropdown-menu, header.color-2 #header-content #header-center .part-1 .dropdown-menu, header.color-2 #header-content #header-center .part-2 .dropdown-menu {
   background-color: #FA9F63;
 }
 
@@ -90,14 +86,22 @@ header.color-2 #header-content #header-center .menu-item ul li,
 header.color-2 #header-content #header-center .part-1 ul li,
 header.color-2 #header-content #header-center .part-2 ul li {
   border: none;
-  background-color: #FA9F63;
+  color: #000000;
 }
 
 header.color-2 #header-content #header-center .menu-item .dropdown-menu a:hover::before, header.color-2 #header-content #header-center .part-1 .dropdown-menu a:hover::before, header.color-2 #header-content #header-center .part-2 .dropdown-menu a:hover::before,
 header.color-2 #header-content #header-center .menu-item ul li:hover::before,
 header.color-2 #header-content #header-center .part-1 ul li:hover::before,
 header.color-2 #header-content #header-center .part-2 ul li:hover::before {
-  background-color: #FFFFFF;
+  background-color: #FA9F63;
+}
+
+header.color-2 #header-content #header-center .nav__dropdown-wrapper li:hover::before {
+  background-color: #FA9F63;
+}
+
+header.color-2 #header-content #header-center .nav__dropdown-wrapper a {
+  color: #000;
 }
 
 header.color-2 #header-content .part-1:hover, header.color-2 #header-content .part-2:hover {
@@ -646,16 +650,17 @@ header #header-content #header-right .header-right-item li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 header #header-content #header-right .header-right-item li::before {
+  content: '';
   position: absolute;
   display: inline-block;
-  content: '';
   border-radius: 50%;
   height: 10px;
   width: 10px;
-  margin-top: -80px;
+  top: -5px;
   background-color: transparent;
 }
 
@@ -683,6 +688,7 @@ header #header-content .menu-item, header #header-content .part-1, header #heade
   line-height: 30px;
   color: #343651;
   cursor: pointer;
+  line-height: 1.2;
 }
 
 header #header-content .menu-item a, header #header-content .part-1 a, header #header-content .part-2 a {
@@ -694,7 +700,7 @@ header #header-content .part-1, header #header-content .part-2 {
   background-color: #FFFFFF;
   color: #343651;
   padding: 12px 18px;
-  border-radius: 22px;
+  border-radius: 27px;
   border: 0;
   margin: 0px 5px;
   font-size: 18px;
@@ -727,7 +733,7 @@ header #header-content .part-1:hover, header #header-content .part-2:hover {
 header #header-content .part-2 {
   width: 50px;
   height: 50px;
-  padding: auto;
+  padding: 10px 15px;
   font-size: 12px;
   border-radius: 50%;
 }
@@ -2474,6 +2480,7 @@ footer #footer-content #footer-3 a:hover {
 
 nav {
   width: 100%;
+  margin-top: 25px;
 }
 
 nav .main-menu {
@@ -2481,7 +2488,7 @@ nav .main-menu {
 }
 
 nav .main-menu .priority-nav__wrapper button {
-  background-color: #71B9F9;
+  background-color: #343651;
   border: none;
   color: #fff;
   padding: 5px;
@@ -2489,6 +2496,7 @@ nav .main-menu .priority-nav__wrapper button {
   height: 30px;
   font-size: 1em;
   line-height: 0px;
+  border-radius: 15px;
 }
 
 nav .main-menu ul.priority-nav__dropdown {
@@ -2500,6 +2508,7 @@ nav .main-menu ul.priority-nav__dropdown {
   -webkit-box-shadow: 0px 35px 30px -25px #E6EAF0;
           box-shadow: 0px 35px 30px -25px #E6EAF0;
   border-radius: 4px;
+  padding-top: 15px;
 }
 
 nav .main-menu ul.priority-nav__dropdown > li {
@@ -2547,10 +2556,13 @@ nav .menu {
 
 nav .menu li {
   display: inline-block;
-  width: 150px;
+  min-width: 150px;
+  max-width: 320px;
   position: relative;
   text-align: center;
   padding-bottom: 15px;
+  white-space: normal;
+  line-height: 1.2;
 }
 
 nav .menu li:hover > ul {
@@ -2609,6 +2621,9 @@ nav .menu ul > li, nav .menu ul a, nav .menu .dropdown-menu > li, nav .menu .dro
   position: relative;
   text-align: left;
   padding-left: 35px;
+  white-space: normal;
+  line-height: 1.4;
+  padding-bottom: 15px;
 }
 
 nav .menu ul > li::before, nav .menu ul a::before, nav .menu .dropdown-menu > li::before, nav .menu .dropdown-menu a::before {
