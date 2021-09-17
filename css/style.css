@@ -40,7 +40,7 @@ header {
           justify-content: center;
   padding: 0 10%;
   background: radial-gradient(59.01% 3480.58% at 11.61% 50%, #FFFFFF 0%, #F5F9FF 100%);
-  /* hissoc color */
+  /* hissoc */
   /* hissoc color */
   /* pedadogy color */
   /* philology color */
@@ -53,11 +53,7 @@ header {
   }
 }
 
-header.color-2 {
-  background: radial-gradient(59.01% 3480.58% at 11.61% 50%, #FAA163 0%, #F55C62 100%);
-}
-
-header.color-2 #header-content #header-center #header-text span {
+header.color #header-content #header-center #header-text span {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -65,28 +61,51 @@ header.color-2 #header-content #header-center #header-text span {
   color: #FFFFFF;
 }
 
-header.color-2 #header-content #header-center #header-text h1 a {
+header.color #header-content #header-center #header-text h1 a {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 41px;
-  line-height: inherit;
+  line-height: 1em;
   color: #FFFFFF;
 }
 
-header.color-2 #header-content #header-center .menu-item a, header.color-2 #header-content #header-center .part-1 a, header.color-2 #header-content #header-center .part-2 a {
+header.color #header-content #header-center .menu-item a, header.color #header-content #header-center .part-1 a, header.color #header-content #header-center .part-2 a {
   color: #ffffff;
+}
+
+header.color #header-content #header-center .menu-item .dropdown-menu a, header.color #header-content #header-center .part-1 .dropdown-menu a, header.color #header-content #header-center .part-2 .dropdown-menu a,
+header.color #header-content #header-center .menu-item ul li,
+header.color #header-content #header-center .part-1 ul li,
+header.color #header-content #header-center .part-2 ul li {
+  border: none;
+  color: #000000;
+}
+
+header.color #header-content #header-center .nav__dropdown-wrapper a {
+  color: #000;
+}
+
+@media (max-width: 1024px) {
+  header.color #header-content #header-center .menu-item a, header.color #header-content #header-center .part-1 a, header.color #header-content #header-center .part-2 a {
+    color: #000;
+  }
+  header.color #header-content #header-center .menu-item .dropdown-menu, header.color #header-content #header-center .part-1 .dropdown-menu, header.color #header-content #header-center .part-2 .dropdown-menu {
+    background-color: transparent;
+  }
+  header.color #header-content #header-center .menu-item .dropdown-menu a, header.color #header-content #header-center .part-1 .dropdown-menu a, header.color #header-content #header-center .part-2 .dropdown-menu a {
+    background-color: transparent;
+  }
+  header.color #header-content #header-center .menu-item .dropdown-menu a:hover::before, header.color #header-content #header-center .part-1 .dropdown-menu a:hover::before, header.color #header-content #header-center .part-2 .dropdown-menu a:hover::before {
+    z-index: -1;
+  }
+}
+
+header.color-2 {
+  background: radial-gradient(59.01% 3480.58% at 11.61% 50%, #FAA163 0%, #F55C62 100%);
 }
 
 header.color-2 #header-content #header-center .menu-item:hover::after, header.color-2 #header-content #header-center .part-1:hover::after, header.color-2 #header-content #header-center .part-2:hover::after {
   background-color: #FA9F63;
-}
-
-header.color-2 #header-content #header-center .menu-item .dropdown-menu a, header.color-2 #header-content #header-center .part-1 .dropdown-menu a, header.color-2 #header-content #header-center .part-2 .dropdown-menu a,
-header.color-2 #header-content #header-center .menu-item ul li,
-header.color-2 #header-content #header-center .part-1 ul li,
-header.color-2 #header-content #header-center .part-2 ul li {
-  border: none;
-  color: #000000;
 }
 
 header.color-2 #header-content #header-center .menu-item .dropdown-menu a:hover::before, header.color-2 #header-content #header-center .part-1 .dropdown-menu a:hover::before, header.color-2 #header-content #header-center .part-2 .dropdown-menu a:hover::before,
@@ -100,28 +119,9 @@ header.color-2 #header-content #header-center .nav__dropdown-wrapper li:hover::b
   background-color: #FA9F63;
 }
 
-header.color-2 #header-content #header-center .nav__dropdown-wrapper a {
-  color: #000;
-}
-
-header.color-2 #header-content .part-1:hover, header.color-2 #header-content .part-2:hover {
-  -webkit-box-shadow: 1px 18px 8px -11px #FA9F63;
-          box-shadow: 1px 18px 8px -11px #FA9F63;
-}
-
 @media (max-width: 1024px) {
-  header.color-2 #header-content #header-center .menu-item a, header.color-2 #header-content #header-center .part-1 a, header.color-2 #header-content #header-center .part-2 a {
-    color: #000;
-  }
-  header.color-2 #header-content #header-center .menu-item .dropdown-menu, header.color-2 #header-content #header-center .part-1 .dropdown-menu, header.color-2 #header-content #header-center .part-2 .dropdown-menu {
-    background-color: transparent;
-  }
-  header.color-2 #header-content #header-center .menu-item .dropdown-menu a, header.color-2 #header-content #header-center .part-1 .dropdown-menu a, header.color-2 #header-content #header-center .part-2 .dropdown-menu a {
-    background-color: transparent;
-  }
   header.color-2 #header-content #header-center .menu-item .dropdown-menu a:hover::before, header.color-2 #header-content #header-center .part-1 .dropdown-menu a:hover::before, header.color-2 #header-content #header-center .part-2 .dropdown-menu a:hover::before {
     background-color: #FA9F63;
-    z-index: -1;
   }
 }
 
@@ -129,67 +129,24 @@ header.color-3 {
   background: radial-gradient(59.01% 3480.58% at 11.61% 50%, #4DBA6C 0%, #27B568 100%);
 }
 
-header.color-3 #header-content #header-center #header-text span {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: inherit;
-  color: #FFFFFF;
-}
-
-header.color-3 #header-content #header-center #header-text h1 a {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 41px;
-  line-height: inherit;
-  color: #FFFFFF;
-}
-
-header.color-3 #header-content #header-center .menu-item a, header.color-3 #header-content #header-center .part-1 a, header.color-3 #header-content #header-center .part-2 a {
-  color: #ffffff;
-}
-
 header.color-3 #header-content #header-center .menu-item:hover::after, header.color-3 #header-content #header-center .part-1:hover::after, header.color-3 #header-content #header-center .part-2:hover::after {
-  background-color: #FFFFFF;
-}
-
-header.color-3 #header-content #header-center .menu-item .dropdown-menu, header.color-3 #header-content #header-center .part-1 .dropdown-menu, header.color-3 #header-content #header-center .part-2 .dropdown-menu {
   background-color: #5FC27C;
-}
-
-header.color-3 #header-content #header-center .menu-item .dropdown-menu a, header.color-3 #header-content #header-center .part-1 .dropdown-menu a, header.color-3 #header-content #header-center .part-2 .dropdown-menu a,
-header.color-3 #header-content #header-center .menu-item ul li,
-header.color-3 #header-content #header-center .part-1 ul li,
-header.color-3 #header-content #header-center .part-2 ul li {
-  background-color: #5FC27C;
-  border: none;
 }
 
 header.color-3 #header-content #header-center .menu-item .dropdown-menu a:hover::before, header.color-3 #header-content #header-center .part-1 .dropdown-menu a:hover::before, header.color-3 #header-content #header-center .part-2 .dropdown-menu a:hover::before,
 header.color-3 #header-content #header-center .menu-item ul li:hover::before,
 header.color-3 #header-content #header-center .part-1 ul li:hover::before,
 header.color-3 #header-content #header-center .part-2 ul li:hover::before {
-  background-color: #FFFFFF;
+  background-color: #5FC27C;
 }
 
-header.color-3 #header-content .part-1:hover, header.color-3 #header-content .part-2:hover {
-  -webkit-box-shadow: 1px 18px 8px -11px #5FC27C;
-          box-shadow: 1px 18px 8px -11px #5FC27C;
+header.color-3 #header-content #header-center .nav__dropdown-wrapper li:hover::before {
+  background-color: #5FC27C;
 }
 
 @media (max-width: 1024px) {
-  header.color-3 #header-content #header-center .menu-item a, header.color-3 #header-content #header-center .part-1 a, header.color-3 #header-content #header-center .part-2 a {
-    color: #000;
-  }
-  header.color-3 #header-content #header-center .menu-item .dropdown-menu, header.color-3 #header-content #header-center .part-1 .dropdown-menu, header.color-3 #header-content #header-center .part-2 .dropdown-menu {
-    background-color: transparent;
-  }
-  header.color-3 #header-content #header-center .menu-item .dropdown-menu a, header.color-3 #header-content #header-center .part-1 .dropdown-menu a, header.color-3 #header-content #header-center .part-2 .dropdown-menu a {
-    background-color: transparent;
-  }
   header.color-3 #header-content #header-center .menu-item .dropdown-menu a:hover::before, header.color-3 #header-content #header-center .part-1 .dropdown-menu a:hover::before, header.color-3 #header-content #header-center .part-2 .dropdown-menu a:hover::before {
     background-color: #5FC27C;
-    z-index: -1;
   }
 }
 
@@ -197,65 +154,24 @@ header.color-4 {
   background: radial-gradient(59.01% 3480.58% at 11.61% 50%, #78b0d1 0%, #4591b6 100%);
 }
 
-header.color-4 #header-content #header-center #header-text span {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: inherit;
-  color: #FFFFFF;
-}
-
-header.color-4 #header-content #header-center #header-text h1 a {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 41px;
-  line-height: inherit;
-  color: #FFFFFF;
-}
-
-header.color-4 #header-content #header-center .menu-item a, header.color-4 #header-content #header-center .part-1 a, header.color-4 #header-content #header-center .part-2 a {
-  color: #ffffff;
-}
-
 header.color-4 #header-content #header-center .menu-item:hover::after, header.color-4 #header-content #header-center .part-1:hover::after, header.color-4 #header-content #header-center .part-2:hover::after {
-  background-color: #FFFFFF;
-}
-
-header.color-4 #header-content #header-center .menu-item .dropdown-menu a, header.color-4 #header-content #header-center .part-1 .dropdown-menu a, header.color-4 #header-content #header-center .part-2 .dropdown-menu a {
-  color: #000000;
-}
-
-header.color-4 #header-content #header-center .menu-item ul li, header.color-4 #header-content #header-center .part-1 ul li, header.color-4 #header-content #header-center .part-2 ul li {
-  border: none;
   background-color: #247986;
 }
 
-header.color-4 #header-content #header-center .menu-item ul li:hover::before, header.color-4 #header-content #header-center .part-1 ul li:hover::before, header.color-4 #header-content #header-center .part-2 ul li:hover::before {
-  background-color: #FFFFFF;
+header.color-4 #header-content #header-center .menu-item .dropdown-menu a:hover::before, header.color-4 #header-content #header-center .part-1 .dropdown-menu a:hover::before, header.color-4 #header-content #header-center .part-2 .dropdown-menu a:hover::before,
+header.color-4 #header-content #header-center .menu-item ul li:hover::before,
+header.color-4 #header-content #header-center .part-1 ul li:hover::before,
+header.color-4 #header-content #header-center .part-2 ul li:hover::before {
+  background-color: #247986;
 }
 
-header.color-4 #header-content #header-center .nav__dropdown .menu-item a, header.color-4 #header-content #header-center .nav__dropdown .part-1 a, header.color-4 #header-content #header-center .nav__dropdown .part-2 a {
-  color: #000;
-}
-
-header.color-4 #header-content .part-1:hover, header.color-4 #header-content .part-2:hover {
-  -webkit-box-shadow: 1px 18px 8px -11px #134c54;
-          box-shadow: 1px 18px 8px -11px #134c54;
+header.color-4 #header-content #header-center .nav__dropdown-wrapper li:hover::before {
+  background-color: #247986;
 }
 
 @media (max-width: 1024px) {
-  header.color-4 #header-content #header-center .menu-item a, header.color-4 #header-content #header-center .part-1 a, header.color-4 #header-content #header-center .part-2 a {
-    color: #000;
-  }
-  header.color-4 #header-content #header-center .menu-item .dropdown-menu, header.color-4 #header-content #header-center .part-1 .dropdown-menu, header.color-4 #header-content #header-center .part-2 .dropdown-menu {
-    background-color: transparent;
-  }
-  header.color-4 #header-content #header-center .menu-item .dropdown-menu a, header.color-4 #header-content #header-center .part-1 .dropdown-menu a, header.color-4 #header-content #header-center .part-2 .dropdown-menu a {
-    background-color: transparent;
-  }
   header.color-4 #header-content #header-center .menu-item .dropdown-menu a:hover::before, header.color-4 #header-content #header-center .part-1 .dropdown-menu a:hover::before, header.color-4 #header-content #header-center .part-2 .dropdown-menu a:hover::before {
     background-color: #247986;
-    z-index: -1;
   }
 }
 
@@ -263,39 +179,7 @@ header.color-5 {
   background: radial-gradient(59.01% 3480.58% at 11.61% 50%, #393083 0%, #0497d9 100%);
 }
 
-header.color-5 #header-content #header-center #header-text span {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: inherit;
-  color: #FFFFFF;
-}
-
-header.color-5 #header-content #header-center #header-text h1 a {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 41px;
-  line-height: inherit;
-  color: #FFFFFF;
-}
-
-header.color-5 #header-content #header-center .menu-item a, header.color-5 #header-content #header-center .part-1 a, header.color-5 #header-content #header-center .part-2 a {
-  color: #ffffff;
-}
-
 header.color-5 #header-content #header-center .menu-item:hover::after, header.color-5 #header-content #header-center .part-1:hover::after, header.color-5 #header-content #header-center .part-2:hover::after {
-  background-color: #FFFFFF;
-}
-
-header.color-5 #header-content #header-center .menu-item .dropdown-menu, header.color-5 #header-content #header-center .part-1 .dropdown-menu, header.color-5 #header-content #header-center .part-2 .dropdown-menu {
-  background-color: #4989C5;
-}
-
-header.color-5 #header-content #header-center .menu-item .dropdown-menu a, header.color-5 #header-content #header-center .part-1 .dropdown-menu a, header.color-5 #header-content #header-center .part-2 .dropdown-menu a,
-header.color-5 #header-content #header-center .menu-item ul li,
-header.color-5 #header-content #header-center .part-1 ul li,
-header.color-5 #header-content #header-center .part-2 ul li {
-  border: none;
   background-color: #4989C5;
 }
 
@@ -303,27 +187,16 @@ header.color-5 #header-content #header-center .menu-item .dropdown-menu a:hover:
 header.color-5 #header-content #header-center .menu-item ul li:hover::before,
 header.color-5 #header-content #header-center .part-1 ul li:hover::before,
 header.color-5 #header-content #header-center .part-2 ul li:hover::before {
-  background-color: #FFFFFF;
+  background-color: #4989C5;
 }
 
-header.color-5 #header-content .part-1:hover, header.color-5 #header-content .part-2:hover {
-  -webkit-box-shadow: 1px 18px 8px -11px #E6EAF0;
-          box-shadow: 1px 18px 8px -11px #E6EAF0;
+header.color-5 #header-content #header-center .nav__dropdown-wrapper li:hover::before {
+  background-color: #4989C5;
 }
 
 @media (max-width: 1024px) {
-  header.color-5 #header-content #header-center .menu-item a, header.color-5 #header-content #header-center .part-1 a, header.color-5 #header-content #header-center .part-2 a {
-    color: #000;
-  }
-  header.color-5 #header-content #header-center .menu-item .dropdown-menu, header.color-5 #header-content #header-center .part-1 .dropdown-menu, header.color-5 #header-content #header-center .part-2 .dropdown-menu {
-    background-color: transparent;
-  }
-  header.color-5 #header-content #header-center .menu-item .dropdown-menu a, header.color-5 #header-content #header-center .part-1 .dropdown-menu a, header.color-5 #header-content #header-center .part-2 .dropdown-menu a {
-    background-color: transparent;
-  }
   header.color-5 #header-content #header-center .menu-item .dropdown-menu a:hover::before, header.color-5 #header-content #header-center .part-1 .dropdown-menu a:hover::before, header.color-5 #header-content #header-center .part-2 .dropdown-menu a:hover::before {
     background-color: #4989C5;
-    z-index: -1;
   }
 }
 
@@ -331,39 +204,7 @@ header.color-6 {
   background: radial-gradient(59.01% 3480.58% at 11.61% 50%, #79B5ED 0%, #5496D5 100%);
 }
 
-header.color-6 #header-content #header-center #header-text span {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: inherit;
-  color: #FFFFFF;
-}
-
-header.color-6 #header-content #header-center #header-text h1 a {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 41px;
-  line-height: inherit;
-  color: #FFFFFF;
-}
-
-header.color-6 #header-content #header-center .menu-item a, header.color-6 #header-content #header-center .part-1 a, header.color-6 #header-content #header-center .part-2 a {
-  color: #ffffff;
-}
-
 header.color-6 #header-content #header-center .menu-item:hover::after, header.color-6 #header-content #header-center .part-1:hover::after, header.color-6 #header-content #header-center .part-2:hover::after {
-  background-color: #FFFFFF;
-}
-
-header.color-6 #header-content #header-center .menu-item .dropdown-menu, header.color-6 #header-content #header-center .part-1 .dropdown-menu, header.color-6 #header-content #header-center .part-2 .dropdown-menu {
-  background-color: #3C6F9E;
-}
-
-header.color-6 #header-content #header-center .menu-item .dropdown-menu a, header.color-6 #header-content #header-center .part-1 .dropdown-menu a, header.color-6 #header-content #header-center .part-2 .dropdown-menu a,
-header.color-6 #header-content #header-center .menu-item ul li,
-header.color-6 #header-content #header-center .part-1 ul li,
-header.color-6 #header-content #header-center .part-2 ul li {
-  border: none;
   background-color: #3C6F9E;
 }
 
@@ -371,27 +212,16 @@ header.color-6 #header-content #header-center .menu-item .dropdown-menu a:hover:
 header.color-6 #header-content #header-center .menu-item ul li:hover::before,
 header.color-6 #header-content #header-center .part-1 ul li:hover::before,
 header.color-6 #header-content #header-center .part-2 ul li:hover::before {
-  background-color: #FFFFFF;
+  background-color: #3C6F9E;
 }
 
-header.color-6 #header-content .part-1:hover, header.color-6 #header-content .part-2:hover {
-  -webkit-box-shadow: 1px 18px 8px -11px #3C6F9E;
-          box-shadow: 1px 18px 8px -11px #3C6F9E;
+header.color-6 #header-content #header-center .nav__dropdown-wrapper li:hover::before {
+  background-color: #3C6F9E;
 }
 
 @media (max-width: 1024px) {
-  header.color-6 #header-content #header-center .menu-item a, header.color-6 #header-content #header-center .part-1 a, header.color-6 #header-content #header-center .part-2 a {
-    color: #000;
-  }
-  header.color-6 #header-content #header-center .menu-item .dropdown-menu, header.color-6 #header-content #header-center .part-1 .dropdown-menu, header.color-6 #header-content #header-center .part-2 .dropdown-menu {
-    background-color: transparent;
-  }
-  header.color-6 #header-content #header-center .menu-item .dropdown-menu a, header.color-6 #header-content #header-center .part-1 .dropdown-menu a, header.color-6 #header-content #header-center .part-2 .dropdown-menu a {
-    background-color: transparent;
-  }
   header.color-6 #header-content #header-center .menu-item .dropdown-menu a:hover::before, header.color-6 #header-content #header-center .part-1 .dropdown-menu a:hover::before, header.color-6 #header-content #header-center .part-2 .dropdown-menu a:hover::before {
     background-color: #3C6F9E;
-    z-index: -1;
   }
 }
 
@@ -579,6 +409,7 @@ header #header-content #header-center #header-text h1 {
 @media (max-width: 482px) {
   header #header-content #header-center #header-text h1 {
     font-size: 22px;
+    margin-top: 15px;
   }
 }
 
@@ -664,13 +495,7 @@ header #header-content #header-right .header-right-item li::before {
   background-color: transparent;
 }
 
-@media (max-width: 1024px) {
-  header #header-content #header-right .header-right-item li::before {
-    margin-top: -50px;
-  }
-}
-
-header #header-content #header-right .header-right-item li:hover::before {
+header #header-content #header-right .header-right-item li:not(.current):hover::before {
   background-color: #343651;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -726,14 +551,14 @@ header #header-content .part-1, header #header-content .part-2 {
 header #header-content .part-1:hover, header #header-content .part-2:hover {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-box-shadow: 1px 18px 8px -11px #D6DCE3;
-          box-shadow: 1px 18px 8px -11px #D6DCE3;
+  -webkit-box-shadow: 1px 18px 8px -11px #00000050;
+          box-shadow: 1px 18px 8px -11px #00000050;
 }
 
 header #header-content .part-2 {
   width: 50px;
   height: 50px;
-  padding: 10px 15px;
+  padding: 17px 15px;
   font-size: 12px;
   border-radius: 50%;
 }
@@ -1882,7 +1707,7 @@ header #header-content .part-2 {
 
 @media (max-width: 712px) {
   #main #main-content #main-row-1 #about .about-row #column-1 {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -1899,7 +1724,7 @@ header #header-content .part-2 {
 
 @media (max-width: 712px) {
   #main #main-content #main-row-1 #about .about-row #column-2 {
-    width: 50%;
+    width: 100%;
   }
 }
 
@@ -2499,14 +2324,18 @@ nav .main-menu .priority-nav__wrapper button {
   border-radius: 15px;
 }
 
+nav .main-menu .priority-nav__wrapper {
+  margin-left: 25px;
+}
+
 nav .main-menu ul.priority-nav__dropdown {
   position: absolute;
   width: auto;
   left: 0;
   z-index: 9;
   background-color: #fff;
-  -webkit-box-shadow: 0px 35px 30px -25px #E6EAF0;
-          box-shadow: 0px 35px 30px -25px #E6EAF0;
+  -webkit-box-shadow: 0px 35px 30px -25px #00000030;
+          box-shadow: 0px 35px 30px -25px #00000030;
   border-radius: 4px;
   padding-top: 15px;
 }
@@ -2605,8 +2434,8 @@ nav .menu ul, nav .menu .dropdown-menu {
   background-color: #fff;
   width: 320px;
   padding-top: 30px;
-  -webkit-box-shadow: 0px 35px 30px -25px #E6EAF0;
-          box-shadow: 0px 35px 30px -25px #E6EAF0;
+  -webkit-box-shadow: 0px 35px 30px -25px #00000030;
+          box-shadow: 0px 35px 30px -25px #00000030;
   border-radius: 4px;
   -webkit-transform: none !important;
           transform: none !important;
@@ -2614,6 +2443,14 @@ nav .menu ul, nav .menu .dropdown-menu {
 
 nav .menu ul.show, nav .menu .dropdown-menu.show {
   display: block;
+}
+
+@media (max-width: 1024px) {
+  nav .menu ul.show, nav .menu .dropdown-menu.show {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    position: relative !important;
+  }
 }
 
 nav .menu ul > li, nav .menu ul a, nav .menu .dropdown-menu > li, nav .menu .dropdown-menu a {
@@ -2686,6 +2523,7 @@ nav .menu ul > li:hover::before, nav .menu ul a:hover::before, nav .menu .dropdo
     text-align: center;
     background-color: #fff;
     margin: 25px 0;
+    border-radius: 5px;
   }
   nav .main-menu.show {
     display: block;
@@ -2717,6 +2555,10 @@ nav .menu ul > li:hover::before, nav .menu ul a:hover::before, nav .menu .dropdo
   nav .main-menu ul ul li {
     position: relative;
     margin-left: 0;
+    text-align: center;
+  }
+  header.color #header-content #header-center .menu-item .dropdown-menu a, header.color #header-content #header-center .part-1 .dropdown-menu a, header.color #header-content #header-center .part-2 .dropdown-menu a {
+    padding: 15px 0;
     text-align: center;
   }
 }
